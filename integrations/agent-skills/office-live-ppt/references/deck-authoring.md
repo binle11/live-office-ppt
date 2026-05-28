@@ -112,5 +112,4 @@ After rendering, inspect:
 - Long text fits its box.
 - Connectors point to the intended shapes.
 - Image crops are intentional.
-- No local absolute paths appear in reusable examples.
 - Speaker notes are present when requested.

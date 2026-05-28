@@ -1,19 +1,6 @@
-# Repository Quality Checklist
+# Repository Quality
 
-Use this checklist when preparing a reusable `live-office-ppt` repository or
-refreshing public examples.
-
-## Files That Should Exist
-
-- `README.md`
-- `LICENSE`
-- `.gitignore`
-- `render-live-ppt.ps1`
-- `schema/deck.schema.json`
-- `docs/json-format.md`
-- `docs/codex-workflow.md`
-- `examples/*.json`
-- `skill/office-live-ppt/SKILL.md`
+Use this checklist when refreshing public examples or preparing a release.
 
 ## Content Scope
 
@@ -24,14 +11,10 @@ Keep the repository focused on reusable tooling:
 - schema files
 - sanitized examples
 - small demo assets
-- the Codex skill
+- agent integration files
 
 Keep generated decks, private project materials, and local workspace artifacts
 in the deck project that consumes this renderer.
-
-Before a public refresh, scan the repository for local paths, temporary cache
-paths, API key names, and token prefixes used on the machine where the examples
-were prepared.
 
 ## Validation
 

@@ -13,7 +13,7 @@
     {
       "id": "biometricHero",
       "type": "image",
-      "source": "codex-imagegen",
+      "source": "agent-image-generation",
       "path": "../assets/images/biometric-network-demo.png",
       "prompt": "A clean professional slide illustration asset for a technical presentation: abstract biometric recognition concept with a palmprint texture and soft blue-green network nodes, minimal scientific style, white background, no text, no logos, no watermark, 16:9 composition, polished business presentation visual."
     }
@@ -21,7 +21,7 @@
   "slides": [
     {
       "background": "#F8FAFC",
-      "notes": "This slide demonstrates the image asset workflow: Codex generates the bitmap, saves it under assets/images, and the PowerPoint COM renderer inserts it as a native picture shape.",
+      "notes": "This slide demonstrates the image asset workflow: an agent generates or sources the bitmap, saves it under assets/images, and the PowerPoint COM renderer inserts it as a native picture shape.",
       "elements": [
         {
           "type": "image",
@@ -57,7 +57,7 @@
         },
         {
           "type": "text",
-          "text": "Codex generates visual assets, then PowerPoint draws the final deck with native shapes and image objects.",
+          "text": "An agent prepares visual assets, then PowerPoint draws the final deck with native shapes and image objects.",
           "x": 66,
           "y": 116,
           "w": 386,

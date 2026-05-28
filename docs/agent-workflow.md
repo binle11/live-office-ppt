@@ -1,6 +1,6 @@
-# Codex Workflow
+# Agent Workflow
 
-Live Office PPT works well with Codex because the deck is split into two
+Live Office PPT works well with coding agents because the deck is split into two
 editable layers:
 
 1. A deterministic JSON slide spec.
@@ -9,10 +9,10 @@ editable layers:
 ## Standard Flow
 
 1. Plan the deck structure and visual direction.
-2. Write a JSON spec under the project workspace.
-3. If the deck needs bitmap visuals, generate them with Codex image generation
-   and copy the final files into `assets/images/`.
-4. Add each generated image to top-level `assets`.
+2. Write a JSON spec under the deck project workspace.
+3. If the deck needs bitmap visuals, generate or source them first and copy the
+   final files into the deck project's `assets/images/`.
+4. Add each image to top-level `assets`.
 5. Validate the spec with `-ValidateOnly`.
 6. Render with PowerPoint visible and a moderate `-StepDelayMs`.
 7. Inspect the live PowerPoint window.
@@ -20,16 +20,15 @@ editable layers:
 
 ## Image Generation Contract
 
-The renderer never calls Codex or OpenAI image APIs directly. Codex should:
+The renderer never calls image APIs directly. Agents should:
 
 1. Produce a clear image prompt.
-2. Generate the image with the available image generation tool.
-3. Copy the selected result into the repository, usually under
-   `assets/images/`.
+2. Generate or source the image with the user's chosen tool.
+3. Copy the selected result into the deck project.
 4. Reference the file from `assets[].path`.
 
-This keeps the open-source renderer portable and avoids embedding private API
-details in the project.
+This keeps the renderer portable and avoids embedding private API details in
+the open-source project.
 
 Recommended asset entry:
 
@@ -37,13 +36,13 @@ Recommended asset entry:
 {
   "id": "marketMapHero",
   "type": "image",
-  "source": "codex-imagegen",
+  "source": "agent-image-generation",
   "path": "assets/images/market-map-hero.png",
   "prompt": "Editorial business illustration of ..."
 }
 ```
 
-## Prompting Guidance for Slide Images
+## Prompting Guidance For Slide Images
 
 Prefer images that support the slide layout instead of competing with it:
 
@@ -62,15 +61,15 @@ If the live render looks wrong:
 - Change coordinates, sizes, colors, or copy in JSON first.
 - Change the renderer only when the JSON needs a reusable primitive that does
   not exist yet.
-- Do not manually fix the PowerPoint file unless the final deliverable is a
+- Avoid manual PowerPoint edits unless the final deliverable is intentionally a
   one-off hand-polished deck. Manual changes are not reproducible.
 
-## When to Use a Different Tool
+## When To Use A Different Tool
 
 Use a different workflow when:
 
 - The deck must be generated on a server without Windows PowerPoint.
 - The output should be one static image per slide.
 - The user explicitly needs macro-enabled behavior.
-- The deck requires complex chart automation that is already handled by another
-  mature charting pipeline.
+- The deck requires complex chart automation already handled by another mature
+  charting pipeline.

@@ -7,6 +7,15 @@ exports/
 tmp/
 *.log
 
+# Secrets and local environment files
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+*.p12
+secrets/
+
 # Windows and editor noise
 Thumbs.db
 Desktop.ini

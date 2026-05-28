@@ -30,7 +30,7 @@ Assets define reusable local files, especially generated images.
 {
   "id": "hero",
   "type": "image",
-  "source": "codex-imagegen",
+  "source": "agent-image-generation",
   "path": "assets/images/hero.png",
   "prompt": "Clean professional slide illustration, no text."
 }
