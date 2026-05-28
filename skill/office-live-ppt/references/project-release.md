@@ -1,6 +1,7 @@
-# Project Release Checklist
+# Repository Quality Checklist
 
-Use this checklist before publishing `live-office-ppt` to GitHub.
+Use this checklist when preparing a reusable `live-office-ppt` repository or
+refreshing public examples.
 
 ## Files That Should Exist
 
@@ -14,20 +15,23 @@ Use this checklist before publishing `live-office-ppt` to GitHub.
 - `examples/*.json`
 - `skill/office-live-ppt/SKILL.md`
 
-## Cleanup
+## Content Scope
 
-Do not commit:
+Keep the repository focused on reusable tooling:
 
-- User project decks unless explicitly intended as sanitized examples.
-- Client or confidential content.
-- Absolute local user-profile or drive-specific workspace paths.
-- Agent-generated image cache paths.
-- API keys or environment files.
-- Rendered `exports/*.pptx` files unless a release artifact is intentionally
-  attached outside source control.
+- renderer scripts
+- documentation
+- schema files
+- sanitized examples
+- small demo assets
+- the Codex skill
 
-Search before publishing for local paths, temporary cache paths, API key names,
-and token prefixes used on the machine where the repository was prepared.
+Keep generated decks, private project materials, and local workspace artifacts
+in the deck project that consumes this renderer.
+
+Before a public refresh, scan the repository for local paths, temporary cache
+paths, API key names, and token prefixes used on the machine where the examples
+were prepared.
 
 ## Validation
 
