@@ -1,0 +1,4 @@
+interface:
+  display_name: "Office Live PPT"
+  short_description: "Create live-rendered native PowerPoint decks through Office COM."
+  default_prompt: "Create a PowerPoint deck with the Office Live PPT workflow."

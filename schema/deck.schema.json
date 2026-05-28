@@ -1,0 +1,446 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/live-office-ppt/deck.schema.json",
+  "title": "Live Office PPT Deck Spec",
+  "type": "object",
+  "required": ["slides"],
+  "additionalProperties": true,
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "output": {
+      "type": "string"
+    },
+    "page": {
+      "$ref": "#/$defs/page"
+    },
+    "theme": {
+      "$ref": "#/$defs/theme"
+    },
+    "assets": {
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/asset"
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/assetWithoutRequiredId"
+          }
+        }
+      ]
+    },
+    "slides": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/slide"
+      }
+    }
+  },
+  "$defs": {
+    "color": {
+      "type": "string",
+      "pattern": "^#?[0-9A-Fa-f]{6}$"
+    },
+    "point": {
+      "type": "number"
+    },
+    "page": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "width": {
+          "type": "number",
+          "default": 960
+        },
+        "height": {
+          "type": "number",
+          "default": 540
+        },
+        "background": {
+          "$ref": "#/$defs/color"
+        },
+        "theme": {
+          "$ref": "#/$defs/theme"
+        }
+      }
+    },
+    "theme": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "font": {
+          "type": "string"
+        }
+      }
+    },
+    "asset": {
+      "type": "object",
+      "required": ["id"],
+      "additionalProperties": true,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "type": "string",
+          "enum": ["image"]
+        },
+        "source": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        },
+        "file": {
+          "type": "string"
+        },
+        "prompt": {
+          "type": "string"
+        }
+      }
+    },
+    "assetWithoutRequiredId": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["image"]
+        },
+        "source": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        },
+        "file": {
+          "type": "string"
+        },
+        "prompt": {
+          "type": "string"
+        }
+      }
+    },
+    "slide": {
+      "type": "object",
+      "required": ["elements"],
+      "additionalProperties": true,
+      "properties": {
+        "background": {
+          "$ref": "#/$defs/color"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "elements": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/element"
+          }
+        }
+      }
+    },
+    "element": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/textElement"
+        },
+        {
+          "$ref": "#/$defs/shapeElement"
+        },
+        {
+          "$ref": "#/$defs/lineElement"
+        },
+        {
+          "$ref": "#/$defs/imageElement"
+        },
+        {
+          "$ref": "#/$defs/sleepElement"
+        }
+      ]
+    },
+    "position": {
+      "type": "object",
+      "required": ["x", "y", "w", "h"],
+      "properties": {
+        "x": {
+          "$ref": "#/$defs/point"
+        },
+        "y": {
+          "$ref": "#/$defs/point"
+        },
+        "w": {
+          "$ref": "#/$defs/point"
+        },
+        "h": {
+          "$ref": "#/$defs/point"
+        }
+      }
+    },
+    "textStyle": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "font": {
+          "type": "string"
+        },
+        "fontSize": {
+          "type": "number"
+        },
+        "color": {
+          "$ref": "#/$defs/color"
+        },
+        "bold": {
+          "type": "boolean"
+        },
+        "align": {
+          "type": "string",
+          "enum": ["left", "center", "right"]
+        },
+        "valign": {
+          "type": "string",
+          "enum": ["top", "middle", "center", "bottom"]
+        }
+      }
+    },
+    "lineStyle": {
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": ["none"]
+        },
+        {
+          "type": "object",
+          "additionalProperties": true,
+          "properties": {
+            "color": {
+              "$ref": "#/$defs/color"
+            },
+            "width": {
+              "type": "number"
+            },
+            "beginArrow": {
+              "$ref": "#/$defs/arrow"
+            },
+            "endArrow": {
+              "$ref": "#/$defs/arrow"
+            }
+          }
+        }
+      ]
+    },
+    "arrow": {
+      "type": "string",
+      "enum": ["none", "triangle", "stealth", "oval", "diamond"]
+    },
+    "fillStyle": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object",
+          "additionalProperties": true,
+          "properties": {
+            "color": {
+              "$ref": "#/$defs/color"
+            },
+            "transparency": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          }
+        }
+      ]
+    },
+    "textElement": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/position"
+        },
+        {
+          "$ref": "#/$defs/textStyle"
+        },
+        {
+          "type": "object",
+          "required": ["type", "text"],
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": ["text", "title"]
+            }
+          }
+        }
+      ]
+    },
+    "shapeElement": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/position"
+        },
+        {
+          "type": "object",
+          "required": ["type"],
+          "additionalProperties": true,
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": ["box", "shape"]
+            },
+            "id": {
+              "type": "string"
+            },
+            "shape": {
+              "type": "string",
+              "enum": ["rect", "rectangle", "roundRect", "roundedRectangle", "oval", "circle", "diamond", "triangle", "hexagon", "parallelogram"]
+            },
+            "text": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/textStyle"
+                }
+              ]
+            },
+            "fill": {
+              "$ref": "#/$defs/fillStyle"
+            },
+            "line": {
+              "$ref": "#/$defs/lineStyle"
+            }
+          }
+        }
+      ]
+    },
+    "lineElement": {
+      "type": "object",
+      "required": ["type"],
+      "additionalProperties": true,
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["line", "connector"]
+        },
+        "id": {
+          "type": "string"
+        },
+        "connector": {
+          "type": "string",
+          "enum": ["straight", "elbow", "curve"]
+        },
+        "from": {
+          "$ref": "#/$defs/pointPair"
+        },
+        "to": {
+          "$ref": "#/$defs/pointPair"
+        },
+        "x1": {
+          "$ref": "#/$defs/point"
+        },
+        "y1": {
+          "$ref": "#/$defs/point"
+        },
+        "x2": {
+          "$ref": "#/$defs/point"
+        },
+        "y2": {
+          "$ref": "#/$defs/point"
+        },
+        "line": {
+          "$ref": "#/$defs/lineStyle"
+        }
+      }
+    },
+    "pointPair": {
+      "type": "array",
+      "prefixItems": [
+        {
+          "$ref": "#/$defs/point"
+        },
+        {
+          "$ref": "#/$defs/point"
+        }
+      ],
+      "items": false,
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "imageElement": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/position"
+        },
+        {
+          "type": "object",
+          "required": ["type"],
+          "additionalProperties": true,
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": ["image"]
+            },
+            "id": {
+              "type": "string"
+            },
+            "asset": {
+              "type": "string"
+            },
+            "path": {
+              "type": "string"
+            },
+            "fit": {
+              "type": "string",
+              "enum": ["cover", "contain", "stretch", "original"]
+            },
+            "line": {
+              "$ref": "#/$defs/lineStyle"
+            },
+            "frame": {
+              "type": "object",
+              "additionalProperties": true
+            }
+          },
+          "anyOf": [
+            {
+              "required": ["asset"]
+            },
+            {
+              "required": ["path"]
+            }
+          ]
+        }
+      ]
+    },
+    "sleepElement": {
+      "type": "object",
+      "required": ["type", "ms"],
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "sleep"
+        },
+        "ms": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    }
+  }
+}

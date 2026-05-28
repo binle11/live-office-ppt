@@ -1,0 +1,598 @@
+{
+  "page": {
+    "width": 960,
+    "height": 540,
+    "background": "#FBFCFE",
+    "theme": {
+      "font": "Aptos"
+    }
+  },
+  "output": "../exports/network-diagram-live.pptx",
+  "slides": [
+    {
+      "background": "#FBFCFE",
+      "notes": "Demo slide generated through PowerPoint COM. The drawing effect comes from the external PowerShell renderer, not from embedded macros.",
+      "elements": [
+        {
+          "type": "title",
+          "text": "Hetero-MMRNet for Missing-Modality Palmprint and Palm-vein Recognition",
+          "x": 145,
+          "y": 24,
+          "w": 670,
+          "h": 28,
+          "fontSize": 15,
+          "color": "#111827",
+          "bold": true
+        },
+        {
+          "type": "box",
+          "id": "input_panel",
+          "shape": "roundRect",
+          "x": 44,
+          "y": 78,
+          "w": 178,
+          "h": 346,
+          "fill": "#FFFFFF",
+          "line": {
+            "color": "#E2E8F0",
+            "width": 1.2
+          }
+        },
+        {
+          "type": "text",
+          "text": "Input Modalities",
+          "x": 69,
+          "y": 88,
+          "w": 128,
+          "h": 20,
+          "fontSize": 10,
+          "bold": true,
+          "color": "#334155"
+        },
+        {
+          "type": "box",
+          "shape": "rect",
+          "x": 73,
+          "y": 112,
+          "w": 118,
+          "h": 78,
+          "fill": "#E8C6A5",
+          "line": {
+            "color": "#B88E68",
+            "width": 1
+          },
+          "text": {
+            "text": "Palmprint\nimage",
+            "fontSize": 11,
+            "bold": true,
+            "color": "#6B4B30"
+          }
+        },
+        {
+          "type": "box",
+          "shape": "rect",
+          "x": 73,
+          "y": 205,
+          "w": 118,
+          "h": 78,
+          "fill": "#2F3846",
+          "line": {
+            "color": "#111827",
+            "width": 1
+          },
+          "text": {
+            "text": "Palm-vein\nimage",
+            "fontSize": 11,
+            "bold": true,
+            "color": "#F8FAFC"
+          }
+        },
+        {
+          "type": "text",
+          "text": "Modality Probability",
+          "x": 67,
+          "y": 300,
+          "w": 130,
+          "h": 18,
+          "fontSize": 9,
+          "bold": true,
+          "color": "#475569"
+        },
+        {
+          "type": "box",
+          "x": 61,
+          "y": 324,
+          "w": 44,
+          "h": 34,
+          "fill": "#EAF3FF",
+          "line": {
+            "color": "#B9D7FF",
+            "width": 1
+          },
+          "text": {
+            "text": "P",
+            "fontSize": 13,
+            "bold": true,
+            "color": "#2563EB"
+          }
+        },
+        {
+          "type": "box",
+          "x": 111,
+          "y": 324,
+          "w": 44,
+          "h": 34,
+          "fill": "#ECFDF5",
+          "line": {
+            "color": "#B7E4CD",
+            "width": 1
+          },
+          "text": {
+            "text": "V",
+            "fontSize": 13,
+            "bold": true,
+            "color": "#047857"
+          }
+        },
+        {
+          "type": "box",
+          "x": 161,
+          "y": 324,
+          "w": 44,
+          "h": 34,
+          "fill": "#FFF7ED",
+          "line": {
+            "color": "#FED7AA",
+            "width": 1
+          },
+          "text": {
+            "text": "M",
+            "fontSize": 13,
+            "bold": true,
+            "color": "#C2410C"
+          }
+        },
+        {
+          "type": "text",
+          "text": "Stage 1: Single-modality Training",
+          "x": 278,
+          "y": 69,
+          "w": 220,
+          "h": 20,
+          "fontSize": 10,
+          "bold": true,
+          "color": "#334155"
+        },
+        {
+          "type": "text",
+          "text": "Stage 2: Fusion Networks",
+          "x": 508,
+          "y": 69,
+          "w": 170,
+          "h": 20,
+          "fontSize": 10,
+          "bold": true,
+          "color": "#334155"
+        },
+        {
+          "type": "text",
+          "text": "Missing Modality Reconstructor",
+          "x": 694,
+          "y": 69,
+          "w": 210,
+          "h": 20,
+          "fontSize": 10,
+          "bold": true,
+          "color": "#334155"
+        },
+        {
+          "type": "line",
+          "from": [222, 151],
+          "to": [278, 151],
+          "line": {
+            "color": "#94A3B8",
+            "width": 1.5,
+            "endArrow": "triangle"
+          }
+        },
+        {
+          "type": "box",
+          "x": 280,
+          "y": 122,
+          "w": 70,
+          "h": 58,
+          "fill": "#F8FAFC",
+          "line": {
+            "color": "#94A3B8",
+            "width": 1
+          },
+          "text": {
+            "text": "Face\nEncoder",
+            "fontSize": 9,
+            "bold": true,
+            "color": "#334155"
+          }
+        },
+        {
+          "type": "line",
+          "from": [350, 151],
+          "to": [392, 151],
+          "line": {
+            "color": "#94A3B8",
+            "width": 1.5,
+            "endArrow": "triangle"
+          }
+        },
+        {
+          "type": "box",
+          "x": 394,
+          "y": 124,
+          "w": 63,
+          "h": 54,
+          "fill": "#F1F5F9",
+          "line": {
+            "color": "#CBD5E1",
+            "width": 1
+          },
+          "text": {
+            "text": "Shared\nBlock",
+            "fontSize": 9,
+            "color": "#334155"
+          }
+        },
+        {
+          "type": "line",
+          "from": [457, 151],
+          "to": [502, 151],
+          "line": {
+            "color": "#94A3B8",
+            "width": 1.5,
+            "endArrow": "triangle"
+          }
+        },
+        {
+          "type": "box",
+          "shape": "rect",
+          "x": 505,
+          "y": 112,
+          "w": 12,
+          "h": 78,
+          "fill": "#3B82F6",
+          "line": "none"
+        },
+        {
+          "type": "box",
+          "shape": "rect",
+          "x": 522,
+          "y": 112,
+          "w": 12,
+          "h": 78,
+          "fill": "#93C5FD",
+          "line": "none"
+        },
+        {
+          "type": "box",
+          "x": 560,
+          "y": 119,
+          "w": 72,
+          "h": 62,
+          "fill": "#EAF3FF",
+          "line": {
+            "color": "#93C5FD",
+            "width": 1.1
+          },
+          "text": {
+            "text": "Fusion\nEncoder",
+            "fontSize": 9,
+            "bold": true,
+            "color": "#1D4ED8"
+          }
+        },
+        {
+          "type": "line",
+          "from": [632, 151],
+          "to": [674, 151],
+          "line": {
+            "color": "#94A3B8",
+            "width": 1.5,
+            "endArrow": "triangle"
+          }
+        },
+        {
+          "type": "box",
+          "x": 678,
+          "y": 118,
+          "w": 72,
+          "h": 64,
+          "fill": "#F0FDF4",
+          "line": {
+            "color": "#86EFAC",
+            "width": 1.1
+          },
+          "text": {
+            "text": "Feature\nDecoder",
+            "fontSize": 9,
+            "bold": true,
+            "color": "#047857"
+          }
+        },
+        {
+          "type": "line",
+          "from": [222, 245],
+          "to": [278, 245],
+          "line": {
+            "color": "#94A3B8",
+            "width": 1.5,
+            "endArrow": "triangle"
+          }
+        },
+        {
+          "type": "box",
+          "x": 280,
+          "y": 216,
+          "w": 70,
+          "h": 58,
+          "fill": "#FFF7ED",
+          "line": {
+            "color": "#FDBA74",
+            "width": 1
+          },
+          "text": {
+            "text": "Vein\nEncoder",
+            "fontSize": 9,
+            "bold": true,
+            "color": "#9A3412"
+          }
+        },
+        {
+          "type": "line",
+          "from": [350, 245],
+          "to": [392, 245],
+          "line": {
+            "color": "#94A3B8",
+            "width": 1.5,
+            "endArrow": "triangle"
+          }
+        },
+        {
+          "type": "box",
+          "x": 394,
+          "y": 218,
+          "w": 63,
+          "h": 54,
+          "fill": "#FEF3C7",
+          "line": {
+            "color": "#FCD34D",
+            "width": 1
+          },
+          "text": {
+            "text": "Shared\nBlock",
+            "fontSize": 9,
+            "color": "#92400E"
+          }
+        },
+        {
+          "type": "line",
+          "from": [457, 245],
+          "to": [502, 245],
+          "line": {
+            "color": "#94A3B8",
+            "width": 1.5,
+            "endArrow": "triangle"
+          }
+        },
+        {
+          "type": "box",
+          "shape": "rect",
+          "x": 505,
+          "y": 206,
+          "w": 12,
+          "h": 78,
+          "fill": "#F97316",
+          "line": "none"
+        },
+        {
+          "type": "box",
+          "shape": "rect",
+          "x": 522,
+          "y": 206,
+          "w": 12,
+          "h": 78,
+          "fill": "#FDBA74",
+          "line": "none"
+        },
+        {
+          "type": "box",
+          "x": 560,
+          "y": 213,
+          "w": 72,
+          "h": 62,
+          "fill": "#FFF7ED",
+          "line": {
+            "color": "#FDBA74",
+            "width": 1.1
+          },
+          "text": {
+            "text": "Adaptive\nFusion",
+            "fontSize": 9,
+            "bold": true,
+            "color": "#C2410C"
+          }
+        },
+        {
+          "type": "line",
+          "from": [632, 245],
+          "to": [674, 245],
+          "line": {
+            "color": "#94A3B8",
+            "width": 1.5,
+            "endArrow": "triangle"
+          }
+        },
+        {
+          "type": "box",
+          "x": 678,
+          "y": 212,
+          "w": 72,
+          "h": 64,
+          "fill": "#FEFCE8",
+          "line": {
+            "color": "#FDE68A",
+            "width": 1.1
+          },
+          "text": {
+            "text": "Missing\nDecoder",
+            "fontSize": 9,
+            "bold": true,
+            "color": "#A16207"
+          }
+        },
+        {
+          "type": "line",
+          "connector": "elbow",
+          "from": [714, 182],
+          "to": [714, 212],
+          "line": {
+            "color": "#CBD5E1",
+            "width": 1.2,
+            "endArrow": "triangle"
+          }
+        },
+        {
+          "type": "box",
+          "x": 790,
+          "y": 129,
+          "w": 86,
+          "h": 48,
+          "fill": "#EEF2FF",
+          "line": {
+            "color": "#A5B4FC",
+            "width": 1.1
+          },
+          "text": {
+            "text": "Class\nLogits",
+            "fontSize": 9,
+            "bold": true,
+            "color": "#4338CA"
+          }
+        },
+        {
+          "type": "line",
+          "from": [750, 151],
+          "to": [790, 151],
+          "line": {
+            "color": "#94A3B8",
+            "width": 1.5,
+            "endArrow": "triangle"
+          }
+        },
+        {
+          "type": "box",
+          "x": 790,
+          "y": 223,
+          "w": 86,
+          "h": 48,
+          "fill": "#ECFDF5",
+          "line": {
+            "color": "#86EFAC",
+            "width": 1.1
+          },
+          "text": {
+            "text": "Identity\nPrediction",
+            "fontSize": 9,
+            "bold": true,
+            "color": "#047857"
+          }
+        },
+        {
+          "type": "line",
+          "from": [750, 245],
+          "to": [790, 245],
+          "line": {
+            "color": "#94A3B8",
+            "width": 1.5,
+            "endArrow": "triangle"
+          }
+        },
+        {
+          "type": "box",
+          "shape": "roundRect",
+          "x": 48,
+          "y": 443,
+          "w": 178,
+          "h": 62,
+          "fill": "#FFFFFF",
+          "line": {
+            "color": "#E2E8F0",
+            "width": 1.1
+          },
+          "text": {
+            "text": "Legend\nblue: palmprint branch\norange: palm-vein branch\ngreen: reconstruction",
+            "fontSize": 8,
+            "align": "left",
+            "color": "#64748B",
+            "valign": "middle"
+          }
+        },
+        {
+          "type": "box",
+          "x": 332,
+          "y": 344,
+          "w": 84,
+          "h": 48,
+          "fill": "#F8FAFC",
+          "line": {
+            "color": "#CBD5E1",
+            "width": 1
+          },
+          "text": {
+            "text": "Contrastive\nLoss",
+            "fontSize": 9,
+            "bold": true,
+            "color": "#334155"
+          }
+        },
+        {
+          "type": "line",
+          "connector": "elbow",
+          "from": [374, 274],
+          "to": [374, 344],
+          "line": {
+            "color": "#CBD5E1",
+            "width": 1.1,
+            "endArrow": "triangle"
+          }
+        },
+        {
+          "type": "box",
+          "x": 520,
+          "y": 344,
+          "w": 96,
+          "h": 48,
+          "fill": "#F8FAFC",
+          "line": {
+            "color": "#CBD5E1",
+            "width": 1
+          },
+          "text": {
+            "text": "Modality\nAlignment",
+            "fontSize": 9,
+            "bold": true,
+            "color": "#334155"
+          }
+        },
+        {
+          "type": "line",
+          "connector": "elbow",
+          "from": [568, 284],
+          "to": [568, 344],
+          "line": {
+            "color": "#CBD5E1",
+            "width": 1.1,
+            "endArrow": "triangle"
+          }
+        }
+      ]
+    }
+  ]
+}

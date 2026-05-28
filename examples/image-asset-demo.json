@@ -1,0 +1,175 @@
+{
+  "version": "0.2.0",
+  "page": {
+    "width": 960,
+    "height": 540,
+    "background": "#F8FAFC",
+    "theme": {
+      "font": "Aptos"
+    }
+  },
+  "output": "../exports/image-asset-demo-live.pptx",
+  "assets": [
+    {
+      "id": "biometricHero",
+      "type": "image",
+      "source": "codex-imagegen",
+      "path": "../assets/images/biometric-network-demo.png",
+      "prompt": "A clean professional slide illustration asset for a technical presentation: abstract biometric recognition concept with a palmprint texture and soft blue-green network nodes, minimal scientific style, white background, no text, no logos, no watermark, 16:9 composition, polished business presentation visual."
+    }
+  ],
+  "slides": [
+    {
+      "background": "#F8FAFC",
+      "notes": "This slide demonstrates the image asset workflow: Codex generates the bitmap, saves it under assets/images, and the PowerPoint COM renderer inserts it as a native picture shape.",
+      "elements": [
+        {
+          "type": "image",
+          "id": "hero_image",
+          "asset": "biometricHero",
+          "x": 500,
+          "y": 0,
+          "w": 460,
+          "h": 540,
+          "fit": "cover"
+        },
+        {
+          "type": "shape",
+          "shape": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 600,
+          "h": 540,
+          "fill": "#F8FAFC",
+          "line": "none"
+        },
+        {
+          "type": "title",
+          "text": "Live Office PPT",
+          "x": 64,
+          "y": 64,
+          "w": 390,
+          "h": 38,
+          "fontSize": 26,
+          "bold": true,
+          "align": "left",
+          "color": "#0F172A"
+        },
+        {
+          "type": "text",
+          "text": "Codex generates visual assets, then PowerPoint draws the final deck with native shapes and image objects.",
+          "x": 66,
+          "y": 116,
+          "w": 386,
+          "h": 72,
+          "fontSize": 17,
+          "align": "left",
+          "valign": "top",
+          "color": "#334155"
+        },
+        {
+          "type": "box",
+          "x": 66,
+          "y": 226,
+          "w": 156,
+          "h": 74,
+          "fill": "#FFFFFF",
+          "line": {
+            "color": "#CBD5E1",
+            "width": 1.1
+          },
+          "text": {
+            "text": "1\nGenerate image",
+            "fontSize": 14,
+            "bold": true,
+            "color": "#0F766E"
+          }
+        },
+        {
+          "type": "line",
+          "from": [222, 263],
+          "to": [266, 263],
+          "line": {
+            "color": "#94A3B8",
+            "width": 1.6,
+            "endArrow": "triangle"
+          }
+        },
+        {
+          "type": "box",
+          "x": 266,
+          "y": 226,
+          "w": 156,
+          "h": 74,
+          "fill": "#FFFFFF",
+          "line": {
+            "color": "#CBD5E1",
+            "width": 1.1
+          },
+          "text": {
+            "text": "2\nSave asset",
+            "fontSize": 14,
+            "bold": true,
+            "color": "#2563EB"
+          }
+        },
+        {
+          "type": "line",
+          "from": [144, 300],
+          "to": [144, 344],
+          "line": {
+            "color": "#94A3B8",
+            "width": 1.6,
+            "endArrow": "triangle"
+          }
+        },
+        {
+          "type": "box",
+          "x": 66,
+          "y": 344,
+          "w": 156,
+          "h": 74,
+          "fill": "#FFFFFF",
+          "line": {
+            "color": "#CBD5E1",
+            "width": 1.1
+          },
+          "text": {
+            "text": "3\nRender via COM",
+            "fontSize": 14,
+            "bold": true,
+            "color": "#7C3AED"
+          }
+        },
+        {
+          "type": "line",
+          "from": [222, 381],
+          "to": [266, 381],
+          "line": {
+            "color": "#94A3B8",
+            "width": 1.6,
+            "endArrow": "triangle"
+          }
+        },
+        {
+          "type": "box",
+          "x": 266,
+          "y": 344,
+          "w": 156,
+          "h": 74,
+          "fill": "#FFFFFF",
+          "line": {
+            "color": "#CBD5E1",
+            "width": 1.1
+          },
+          "text": {
+            "text": "4\nReview live",
+            "fontSize": 14,
+            "bold": true,
+            "color": "#C2410C"
+          }
+        }
+      ]
+    }
+  ]
+}
