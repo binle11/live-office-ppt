@@ -16,6 +16,9 @@ VALIDATOR = ROOT / "validate-deck.py"
 EXAMPLES = (
     ROOT / "examples" / "network-diagram.json",
     ROOT / "examples" / "image-asset-demo.json",
+    ROOT / "examples" / "consulting-deck.json",
+    ROOT / "examples" / "research-brief.json",
+    ROOT / "examples" / "product-overview.json",
     ROOT / "tests" / "fixtures" / "valid" / "object-assets.json",
 )
 

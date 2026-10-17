@@ -196,8 +196,19 @@ deck project unless you intentionally want to publish them.
 
 ## Examples
 
-- `examples/network-diagram.json`: native shapes, arrows, and text.
-- `examples/image-asset-demo.json`: generated image asset inserted through COM.
+Choose a scene, edit the JSON, and validate the spec before rendering. The
+[examples index](docs/examples-index.md) maps each scene to its file and the
+fields it demonstrates.
+
+- [examples/network-diagram.json](examples/network-diagram.json): native shapes, arrows, and text.
+- [examples/image-asset-demo.json](examples/image-asset-demo.json): generated image asset inserted through COM.
+- [examples/consulting-deck.json](examples/consulting-deck.json): Chinese consulting deck with agenda, comparison, and recommendation slides.
+- [examples/research-brief.json](examples/research-brief.json): Chinese research brief with summary, findings, a citations area, and speaker notes.
+- [examples/product-overview.json](examples/product-overview.json): Chinese product overview with feature points and a local image asset.
+
+Field reference, checks, and the edit loop: [docs/json-format.md](docs/json-format.md),
+[docs/validation.md](docs/validation.md), and
+[docs/agent-workflow.md](docs/agent-workflow.md).
 
 ## Safety Model
 
@@ -216,7 +227,6 @@ Generated `.pptx` files do not contain auto-run macros.
 - More native chart primitives
 - Template and theme support
 - Optional grouped element abstractions
-- More examples for consulting, research, and product decks
 
 ## Contributing
 

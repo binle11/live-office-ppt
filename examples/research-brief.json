@@ -1,0 +1,642 @@
+{
+  "version": "0.2.0",
+  "page": {
+    "width": 960,
+    "height": 540,
+    "background": "#F8FAFC",
+    "theme": {
+      "font": "Microsoft YaHei"
+    }
+  },
+  "output": "../exports/research-brief-live.pptx",
+  "slides": [
+    {
+      "background": "#F8FAFC",
+      "notes": "先说问题，再读三条摘要。文中的时间与现象是版式样例，替换成实际观察后再对外使用。",
+      "elements": [
+        {
+          "type": "shape",
+          "shape": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 960,
+          "h": 8,
+          "fill": "#0F766E",
+          "line": "none"
+        },
+        {
+          "type": "text",
+          "text": "研究简报 · 摘要",
+          "x": 40,
+          "y": 28,
+          "w": 360,
+          "h": 20,
+          "fontSize": 13,
+          "bold": true,
+          "align": "left",
+          "color": "#0F766E"
+        },
+        {
+          "type": "title",
+          "text": "社区图书馆晚间到馆",
+          "x": 40,
+          "y": 52,
+          "w": 820,
+          "h": 40,
+          "fontSize": 28,
+          "bold": true,
+          "align": "left",
+          "color": "#0F172A"
+        },
+        {
+          "type": "text",
+          "text": "问题：工作日 18:00 至 21:00，座位和咨询台是否够用？",
+          "x": 40,
+          "y": 98,
+          "w": 860,
+          "h": 28,
+          "fontSize": 15,
+          "align": "left",
+          "color": "#475569"
+        },
+        {
+          "type": "shape",
+          "id": "summary_panel",
+          "shape": "roundRect",
+          "x": 40,
+          "y": 142,
+          "w": 880,
+          "h": 96,
+          "fill": "#F0FDFA",
+          "line": {
+            "color": "#99F6E4",
+            "width": 1.1
+          }
+        },
+        {
+          "type": "text",
+          "text": "晚间自习座位周转变慢，咨询问题集中在办证和检索，儿童区仍有空位。下面三条是这次简报的摘要。",
+          "x": 64,
+          "y": 158,
+          "w": 832,
+          "h": 64,
+          "fontSize": 16,
+          "align": "left",
+          "valign": "middle",
+          "color": "#134E4A"
+        },
+        {
+          "type": "shape",
+          "shape": "roundRect",
+          "x": 40,
+          "y": 258,
+          "w": 272,
+          "h": 220,
+          "fill": "#FFFFFF",
+          "line": {
+            "color": "#E2E8F0",
+            "width": 1.1
+          }
+        },
+        {
+          "type": "text",
+          "text": "座位",
+          "x": 60,
+          "y": 278,
+          "w": 232,
+          "h": 24,
+          "fontSize": 13,
+          "bold": true,
+          "align": "left",
+          "color": "#0F766E"
+        },
+        {
+          "type": "text",
+          "text": "接近坐满",
+          "x": 60,
+          "y": 310,
+          "w": 232,
+          "h": 36,
+          "fontSize": 20,
+          "bold": true,
+          "align": "left",
+          "color": "#0F172A"
+        },
+        {
+          "type": "text",
+          "text": "19:30 前后自习座位接近坐满，短时读者开始站候。",
+          "x": 60,
+          "y": 356,
+          "w": 232,
+          "h": 96,
+          "fontSize": 15,
+          "align": "left",
+          "valign": "top",
+          "color": "#334155"
+        },
+        {
+          "type": "shape",
+          "shape": "roundRect",
+          "x": 344,
+          "y": 258,
+          "w": 272,
+          "h": 220,
+          "fill": "#FFFFFF",
+          "line": {
+            "color": "#E2E8F0",
+            "width": 1.1
+          }
+        },
+        {
+          "type": "text",
+          "text": "咨询台",
+          "x": 364,
+          "y": 278,
+          "w": 232,
+          "h": 24,
+          "fontSize": 13,
+          "bold": true,
+          "align": "left",
+          "color": "#2563EB"
+        },
+        {
+          "type": "text",
+          "text": "整点后排队",
+          "x": 364,
+          "y": 310,
+          "w": 232,
+          "h": 36,
+          "fontSize": 20,
+          "bold": true,
+          "align": "left",
+          "color": "#0F172A"
+        },
+        {
+          "type": "text",
+          "text": "办证和检索占晚间咨询的大部分，整点后出现排队。",
+          "x": 364,
+          "y": 356,
+          "w": 232,
+          "h": 96,
+          "fontSize": 15,
+          "align": "left",
+          "valign": "top",
+          "color": "#334155"
+        },
+        {
+          "type": "shape",
+          "shape": "roundRect",
+          "x": 648,
+          "y": 258,
+          "w": 272,
+          "h": 220,
+          "fill": "#FFFFFF",
+          "line": {
+            "color": "#E2E8F0",
+            "width": 1.1
+          }
+        },
+        {
+          "type": "text",
+          "text": "分区",
+          "x": 668,
+          "y": 278,
+          "w": 232,
+          "h": 24,
+          "fontSize": 13,
+          "bold": true,
+          "align": "left",
+          "color": "#C2410C"
+        },
+        {
+          "type": "text",
+          "text": "儿童区有空位",
+          "x": 668,
+          "y": 310,
+          "w": 232,
+          "h": 36,
+          "fontSize": 20,
+          "bold": true,
+          "align": "left",
+          "color": "#0F172A"
+        },
+        {
+          "type": "text",
+          "text": "儿童区在同一时段仍有空位，和自习区形成反差。",
+          "x": 668,
+          "y": 356,
+          "w": 232,
+          "h": 96,
+          "fontSize": 15,
+          "align": "left",
+          "valign": "top",
+          "color": "#334155"
+        }
+      ]
+    },
+    {
+      "background": "#F8FAFC",
+      "notes": "每条发现只讲一句结论和一句依据。依据来自演示材料，不要当成已发表结果。",
+      "elements": [
+        {
+          "type": "shape",
+          "shape": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 960,
+          "h": 8,
+          "fill": "#0F766E",
+          "line": "none"
+        },
+        {
+          "type": "text",
+          "text": "研究简报 · 发现",
+          "x": 40,
+          "y": 28,
+          "w": 360,
+          "h": 20,
+          "fontSize": 13,
+          "bold": true,
+          "align": "left",
+          "color": "#0F766E"
+        },
+        {
+          "type": "title",
+          "text": "三条发现",
+          "x": 40,
+          "y": 52,
+          "w": 760,
+          "h": 40,
+          "fontSize": 28,
+          "bold": true,
+          "align": "left",
+          "color": "#0F172A"
+        },
+        {
+          "type": "text",
+          "text": "每条只保留一句结论和一句依据，方便口头展开。",
+          "x": 40,
+          "y": 98,
+          "w": 820,
+          "h": 28,
+          "fontSize": 15,
+          "align": "left",
+          "color": "#475569"
+        },
+        {
+          "type": "shape",
+          "id": "finding_seats",
+          "shape": "roundRect",
+          "x": 40,
+          "y": 146,
+          "w": 880,
+          "h": 108,
+          "fill": "#FFFFFF",
+          "line": {
+            "color": "#E2E8F0",
+            "width": 1.1
+          }
+        },
+        {
+          "type": "shape",
+          "shape": "rect",
+          "x": 56,
+          "y": 166,
+          "w": 8,
+          "h": 68,
+          "fill": "#0F766E",
+          "line": "none"
+        },
+        {
+          "type": "text",
+          "text": "01",
+          "x": 80,
+          "y": 164,
+          "w": 48,
+          "h": 28,
+          "fontSize": 14,
+          "bold": true,
+          "align": "left",
+          "color": "#0F766E"
+        },
+        {
+          "type": "text",
+          "text": "自习区在晚间接近满座",
+          "x": 132,
+          "y": 162,
+          "w": 748,
+          "h": 32,
+          "fontSize": 18,
+          "bold": true,
+          "align": "left",
+          "color": "#0F172A"
+        },
+        {
+          "type": "text",
+          "text": "演示记录里，19:30 的空位只剩零星散座。",
+          "x": 132,
+          "y": 200,
+          "w": 748,
+          "h": 36,
+          "fontSize": 15,
+          "align": "left",
+          "color": "#334155"
+        },
+        {
+          "type": "shape",
+          "id": "finding_desk",
+          "shape": "roundRect",
+          "x": 40,
+          "y": 270,
+          "w": 880,
+          "h": 108,
+          "fill": "#FFFFFF",
+          "line": {
+            "color": "#E2E8F0",
+            "width": 1.1
+          }
+        },
+        {
+          "type": "shape",
+          "shape": "rect",
+          "x": 56,
+          "y": 290,
+          "w": 8,
+          "h": 68,
+          "fill": "#2563EB",
+          "line": "none"
+        },
+        {
+          "type": "text",
+          "text": "02",
+          "x": 80,
+          "y": 288,
+          "w": 48,
+          "h": 28,
+          "fontSize": 14,
+          "bold": true,
+          "align": "left",
+          "color": "#2563EB"
+        },
+        {
+          "type": "text",
+          "text": "咨询等待集中在整点之后",
+          "x": 132,
+          "y": 286,
+          "w": 748,
+          "h": 32,
+          "fontSize": 18,
+          "bold": true,
+          "align": "left",
+          "color": "#0F172A"
+        },
+        {
+          "type": "text",
+          "text": "办证和检索叠在一起，队伍比白天更长。",
+          "x": 132,
+          "y": 324,
+          "w": 748,
+          "h": 36,
+          "fontSize": 15,
+          "align": "left",
+          "color": "#334155"
+        },
+        {
+          "type": "shape",
+          "id": "finding_zones",
+          "shape": "roundRect",
+          "x": 40,
+          "y": 394,
+          "w": 880,
+          "h": 108,
+          "fill": "#FFFFFF",
+          "line": {
+            "color": "#E2E8F0",
+            "width": 1.1
+          }
+        },
+        {
+          "type": "shape",
+          "shape": "rect",
+          "x": 56,
+          "y": 414,
+          "w": 8,
+          "h": 68,
+          "fill": "#C2410C",
+          "line": "none"
+        },
+        {
+          "type": "text",
+          "text": "03",
+          "x": 80,
+          "y": 412,
+          "w": 48,
+          "h": 28,
+          "fontSize": 14,
+          "bold": true,
+          "align": "left",
+          "color": "#C2410C"
+        },
+        {
+          "type": "text",
+          "text": "儿童区仍有可调剂的空位",
+          "x": 132,
+          "y": 410,
+          "w": 748,
+          "h": 32,
+          "fontSize": 18,
+          "bold": true,
+          "align": "left",
+          "color": "#0F172A"
+        },
+        {
+          "type": "text",
+          "text": "同一时段儿童区未满，可以在现场提示分流。",
+          "x": 132,
+          "y": 448,
+          "w": 748,
+          "h": 36,
+          "fontSize": 15,
+          "align": "left",
+          "color": "#334155"
+        }
+      ]
+    },
+    {
+      "background": "#F8FAFC",
+      "notes": "这一页演示引用区的版式。条目是占位，对外使用前换成可核对的文献。",
+      "elements": [
+        {
+          "type": "shape",
+          "shape": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 960,
+          "h": 8,
+          "fill": "#0F766E",
+          "line": "none"
+        },
+        {
+          "type": "text",
+          "text": "研究简报 · 引用",
+          "x": 40,
+          "y": 28,
+          "w": 360,
+          "h": 20,
+          "fontSize": 13,
+          "bold": true,
+          "align": "left",
+          "color": "#0F766E"
+        },
+        {
+          "type": "title",
+          "text": "材料与引用",
+          "x": 40,
+          "y": 52,
+          "w": 760,
+          "h": 40,
+          "fontSize": 28,
+          "bold": true,
+          "align": "left",
+          "color": "#0F172A"
+        },
+        {
+          "type": "text",
+          "text": "引用区单独成页，方便替换成真实文献。",
+          "x": 40,
+          "y": 98,
+          "w": 820,
+          "h": 28,
+          "fontSize": 15,
+          "align": "left",
+          "color": "#475569"
+        },
+        {
+          "type": "shape",
+          "id": "citation_panel",
+          "shape": "roundRect",
+          "x": 40,
+          "y": 142,
+          "w": 880,
+          "h": 348,
+          "fill": "#FFFFFF",
+          "line": {
+            "color": "#E2E8F0",
+            "width": 1.1
+          }
+        },
+        {
+          "type": "text",
+          "text": "1",
+          "x": 64,
+          "y": 166,
+          "w": 36,
+          "h": 28,
+          "fontSize": 16,
+          "bold": true,
+          "align": "left",
+          "color": "#0F766E"
+        },
+        {
+          "type": "text",
+          "text": "作者甲（2024）。公共阅读空间的晚间使用。演示条目。",
+          "x": 108,
+          "y": 166,
+          "w": 772,
+          "h": 48,
+          "fontSize": 16,
+          "align": "left",
+          "valign": "top",
+          "color": "#0F172A"
+        },
+        {
+          "type": "line",
+          "from": [64, 230],
+          "to": [896, 230],
+          "line": {
+            "color": "#E2E8F0",
+            "width": 1
+          }
+        },
+        {
+          "type": "text",
+          "text": "2",
+          "x": 64,
+          "y": 246,
+          "w": 36,
+          "h": 28,
+          "fontSize": 16,
+          "bold": true,
+          "align": "left",
+          "color": "#0F766E"
+        },
+        {
+          "type": "text",
+          "text": "作者乙（2023）。社区图书馆座位周转记录。演示条目。",
+          "x": 108,
+          "y": 246,
+          "w": 772,
+          "h": 48,
+          "fontSize": 16,
+          "align": "left",
+          "valign": "top",
+          "color": "#0F172A"
+        },
+        {
+          "type": "line",
+          "from": [64, 310],
+          "to": [896, 310],
+          "line": {
+            "color": "#E2E8F0",
+            "width": 1
+          }
+        },
+        {
+          "type": "text",
+          "text": "3",
+          "x": 64,
+          "y": 326,
+          "w": 36,
+          "h": 28,
+          "fontSize": 16,
+          "bold": true,
+          "align": "left",
+          "color": "#0F766E"
+        },
+        {
+          "type": "text",
+          "text": "作者丙（2022）。到馆高峰与咨询台配置。演示条目。",
+          "x": 108,
+          "y": 326,
+          "w": 772,
+          "h": 48,
+          "fontSize": 16,
+          "align": "left",
+          "valign": "top",
+          "color": "#0F172A"
+        },
+        {
+          "type": "line",
+          "from": [64, 390],
+          "to": [896, 390],
+          "line": {
+            "color": "#E2E8F0",
+            "width": 1
+          }
+        },
+        {
+          "type": "text",
+          "text": "这些条目只演示引用区怎么排。对外使用前，换成可以核对的文献。",
+          "x": 64,
+          "y": 410,
+          "w": 832,
+          "h": 52,
+          "fontSize": 14,
+          "align": "left",
+          "valign": "middle",
+          "color": "#64748B"
+        }
+      ]
+    }
+  ]
+}

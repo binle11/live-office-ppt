@@ -24,6 +24,9 @@ PowerPoint:
 python3 -m pip install -r requirements-validate.txt
 python3 validate-deck.py examples/network-diagram.json
 python3 validate-deck.py examples/image-asset-demo.json
+python3 validate-deck.py examples/consulting-deck.json
+python3 validate-deck.py examples/research-brief.json
+python3 validate-deck.py examples/product-overview.json
 python3 -m unittest tests/test_validation.py
 ```
 
@@ -37,6 +40,18 @@ powershell -ExecutionPolicy Bypass -File .\render-live-ppt.ps1 `
 
 powershell -ExecutionPolicy Bypass -File .\render-live-ppt.ps1 `
   -Spec .\examples\image-asset-demo.json `
+  -ValidateOnly
+
+powershell -ExecutionPolicy Bypass -File .\render-live-ppt.ps1 `
+  -Spec .\examples\consulting-deck.json `
+  -ValidateOnly
+
+powershell -ExecutionPolicy Bypass -File .\render-live-ppt.ps1 `
+  -Spec .\examples\research-brief.json `
+  -ValidateOnly
+
+powershell -ExecutionPolicy Bypass -File .\render-live-ppt.ps1 `
+  -Spec .\examples\product-overview.json `
   -ValidateOnly
 ```
 
