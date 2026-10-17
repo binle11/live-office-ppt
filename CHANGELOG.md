@@ -7,6 +7,7 @@ at `0.1.0` while the JSON spec and renderer are still evolving.
 
 ## Unreleased
 
+- Added Chinese example decks for a consulting narrative, a research brief, and a product overview, plus an examples index.
 - Added `validate-deck.py`, a COM-free checker for Linux and CI. It loads the deck schema and prints each failure as a field path plus a reason.
 - Required schema colors to use `#RRGGBB`, and required element width and height to be greater than zero.
 - The pure validator checks that positioned elements and line endpoints stay inside the page canvas, and that image elements reference a declared asset id.

@@ -16,6 +16,9 @@ write `exports/*.pptx`.
 python3 -m pip install -r requirements-validate.txt
 python3 validate-deck.py examples/network-diagram.json
 python3 validate-deck.py examples/image-asset-demo.json
+python3 validate-deck.py examples/consulting-deck.json
+python3 validate-deck.py examples/research-brief.json
+python3 validate-deck.py examples/product-overview.json
 ```
 
 Several specs can be passed in one invocation. The process exits `0` when every
@@ -42,8 +45,11 @@ Run the fixture suite from the repository root:
 python3 -m unittest tests/test_validation.py
 ```
 
-`examples/network-diagram.json` and `examples/image-asset-demo.json` are the
-passing specs. `tests/fixtures/invalid/` holds specs that must fail:
+`examples/network-diagram.json`, `examples/image-asset-demo.json`,
+`examples/consulting-deck.json`, `examples/research-brief.json`, and
+`examples/product-overview.json` are the passing specs. The scene map is in
+[examples-index.md](examples-index.md). `tests/fixtures/invalid/` holds specs
+that must fail:
 
 | Fixture | Failure |
 | --- | --- |

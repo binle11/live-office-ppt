@@ -1,0 +1,476 @@
+{
+  "version": "0.2.0",
+  "page": {
+    "width": 960,
+    "height": 540,
+    "background": "#F8FAFC",
+    "theme": {
+      "font": "Microsoft YaHei"
+    }
+  },
+  "output": "../exports/product-overview-live.pptx",
+  "assets": [
+    {
+      "id": "productHero",
+      "type": "image",
+      "source": "agent-image-generation",
+      "path": "../assets/images/biometric-network-demo.png",
+      "prompt": "A clean professional slide illustration asset for a technical presentation: abstract biometric recognition concept with a palmprint texture and soft blue-green network nodes, minimal scientific style, white background, no text, no logos, no watermark, 16:9 composition, polished business presentation visual."
+    }
+  ],
+  "slides": [
+    {
+      "background": "#F8FAFC",
+      "notes": "先讲这是什么，再指向三张功能卡。配图是仓库里已有的演示图。",
+      "elements": [
+        {
+          "type": "shape",
+          "shape": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 960,
+          "h": 8,
+          "fill": "#7C3AED",
+          "line": "none"
+        },
+        {
+          "type": "text",
+          "text": "产品概览",
+          "x": 40,
+          "y": 24,
+          "w": 240,
+          "h": 20,
+          "fontSize": 13,
+          "bold": true,
+          "align": "left",
+          "color": "#7C3AED"
+        },
+        {
+          "type": "title",
+          "text": "现场核验助手",
+          "x": 40,
+          "y": 46,
+          "w": 860,
+          "h": 38,
+          "fontSize": 28,
+          "bold": true,
+          "align": "left",
+          "color": "#0F172A"
+        },
+        {
+          "type": "text",
+          "text": "面向柜面和闸机前的身份核验演示。右侧配图复用仓库中的掌纹网络插图，说明文字保持可编辑。",
+          "x": 40,
+          "y": 90,
+          "w": 880,
+          "h": 44,
+          "fontSize": 15,
+          "align": "left",
+          "valign": "top",
+          "color": "#475569"
+        },
+        {
+          "type": "shape",
+          "shape": "roundRect",
+          "x": 40,
+          "y": 150,
+          "w": 460,
+          "h": 104,
+          "fill": "#FFFFFF",
+          "line": {
+            "color": "#E2E8F0",
+            "width": 1.1
+          }
+        },
+        {
+          "type": "text",
+          "text": "双模态采集",
+          "x": 60,
+          "y": 166,
+          "w": 420,
+          "h": 28,
+          "fontSize": 16,
+          "bold": true,
+          "align": "left",
+          "color": "#0F172A"
+        },
+        {
+          "type": "text",
+          "text": "掌纹与掌静脉分开展示，方便按路讲解。",
+          "x": 60,
+          "y": 198,
+          "w": 420,
+          "h": 40,
+          "fontSize": 14,
+          "align": "left",
+          "valign": "top",
+          "color": "#334155"
+        },
+        {
+          "type": "shape",
+          "shape": "roundRect",
+          "x": 40,
+          "y": 268,
+          "w": 460,
+          "h": 104,
+          "fill": "#FFFFFF",
+          "line": {
+            "color": "#E2E8F0",
+            "width": 1.1
+          }
+        },
+        {
+          "type": "text",
+          "text": "缺一路仍可说明",
+          "x": 60,
+          "y": 284,
+          "w": 420,
+          "h": 28,
+          "fontSize": 16,
+          "bold": true,
+          "align": "left",
+          "color": "#0F172A"
+        },
+        {
+          "type": "text",
+          "text": "缺少其中一路时，页面仍保留另一路和结论。",
+          "x": 60,
+          "y": 316,
+          "w": 420,
+          "h": 40,
+          "fontSize": 14,
+          "align": "left",
+          "valign": "top",
+          "color": "#334155"
+        },
+        {
+          "type": "shape",
+          "shape": "roundRect",
+          "x": 40,
+          "y": 386,
+          "w": 460,
+          "h": 104,
+          "fill": "#FFFFFF",
+          "line": {
+            "color": "#E2E8F0",
+            "width": 1.1
+          }
+        },
+        {
+          "type": "text",
+          "text": "文字留在幻灯片里",
+          "x": 60,
+          "y": 402,
+          "w": 420,
+          "h": 28,
+          "fontSize": 16,
+          "bold": true,
+          "align": "left",
+          "color": "#0F172A"
+        },
+        {
+          "type": "text",
+          "text": "标题和要点写在文本框中，图片只作配图。",
+          "x": 60,
+          "y": 434,
+          "w": 420,
+          "h": 40,
+          "fontSize": 14,
+          "align": "left",
+          "valign": "top",
+          "color": "#334155"
+        },
+        {
+          "type": "image",
+          "id": "product_hero",
+          "asset": "productHero",
+          "x": 520,
+          "y": 150,
+          "w": 400,
+          "h": 225,
+          "fit": "contain",
+          "frame": {
+            "shape": "rect",
+            "fill": "#FFFFFF",
+            "line": {
+              "color": "#E2E8F0",
+              "width": 1.1
+            }
+          }
+        },
+        {
+          "type": "shape",
+          "shape": "roundRect",
+          "x": 520,
+          "y": 390,
+          "w": 400,
+          "h": 100,
+          "fill": "#F5F3FF",
+          "line": {
+            "color": "#DDD6FE",
+            "width": 1.1
+          }
+        },
+        {
+          "type": "text",
+          "text": "演示插图来自 assets/images/biometric-network-demo.png。更换图片时，只改资产路径。",
+          "x": 540,
+          "y": 406,
+          "w": 360,
+          "h": 68,
+          "fontSize": 14,
+          "align": "left",
+          "valign": "middle",
+          "color": "#5B21B6"
+        }
+      ]
+    },
+    {
+      "background": "#F8FAFC",
+      "notes": "这一页只讲功能点。换产品时改文字。若更换图片，把资产 path 指到真实文件。",
+      "elements": [
+        {
+          "type": "shape",
+          "shape": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 960,
+          "h": 8,
+          "fill": "#7C3AED",
+          "line": "none"
+        },
+        {
+          "type": "text",
+          "text": "产品概览 · 功能要点",
+          "x": 40,
+          "y": 28,
+          "w": 420,
+          "h": 20,
+          "fontSize": 13,
+          "bold": true,
+          "align": "left",
+          "color": "#7C3AED"
+        },
+        {
+          "type": "title",
+          "text": "四项能力",
+          "x": 40,
+          "y": 52,
+          "w": 760,
+          "h": 40,
+          "fontSize": 28,
+          "bold": true,
+          "align": "left",
+          "color": "#0F172A"
+        },
+        {
+          "type": "text",
+          "text": "功能点用文字和形状表达，方便直接改 JSON。",
+          "x": 40,
+          "y": 98,
+          "w": 820,
+          "h": 28,
+          "fontSize": 15,
+          "align": "left",
+          "color": "#475569"
+        },
+        {
+          "type": "shape",
+          "shape": "roundRect",
+          "x": 40,
+          "y": 148,
+          "w": 424,
+          "h": 156,
+          "fill": "#FFFFFF",
+          "line": {
+            "color": "#E2E8F0",
+            "width": 1.1
+          }
+        },
+        {
+          "type": "text",
+          "text": "01",
+          "x": 64,
+          "y": 168,
+          "w": 80,
+          "h": 22,
+          "fontSize": 13,
+          "bold": true,
+          "align": "left",
+          "color": "#7C3AED"
+        },
+        {
+          "type": "text",
+          "text": "现场采集",
+          "x": 64,
+          "y": 194,
+          "w": 376,
+          "h": 32,
+          "fontSize": 20,
+          "bold": true,
+          "align": "left",
+          "color": "#0F172A"
+        },
+        {
+          "type": "text",
+          "text": "用形状标出掌纹与掌静脉两路，讲解时可以逐项指认。",
+          "x": 64,
+          "y": 232,
+          "w": 376,
+          "h": 48,
+          "fontSize": 15,
+          "align": "left",
+          "valign": "top",
+          "color": "#334155"
+        },
+        {
+          "type": "shape",
+          "shape": "roundRect",
+          "x": 496,
+          "y": 148,
+          "w": 424,
+          "h": 156,
+          "fill": "#FFFFFF",
+          "line": {
+            "color": "#E2E8F0",
+            "width": 1.1
+          }
+        },
+        {
+          "type": "text",
+          "text": "02",
+          "x": 520,
+          "y": 168,
+          "w": 80,
+          "h": 22,
+          "fontSize": 13,
+          "bold": true,
+          "align": "left",
+          "color": "#2563EB"
+        },
+        {
+          "type": "text",
+          "text": "缺失模态",
+          "x": 520,
+          "y": 194,
+          "w": 376,
+          "h": 32,
+          "fontSize": 20,
+          "bold": true,
+          "align": "left",
+          "color": "#0F172A"
+        },
+        {
+          "type": "text",
+          "text": "缺一路时，版面仍保留另一路和结论区。",
+          "x": 520,
+          "y": 232,
+          "w": 376,
+          "h": 48,
+          "fontSize": 15,
+          "align": "left",
+          "valign": "top",
+          "color": "#334155"
+        },
+        {
+          "type": "shape",
+          "shape": "roundRect",
+          "x": 40,
+          "y": 328,
+          "w": 424,
+          "h": 156,
+          "fill": "#FFFFFF",
+          "line": {
+            "color": "#E2E8F0",
+            "width": 1.1
+          }
+        },
+        {
+          "type": "text",
+          "text": "03",
+          "x": 64,
+          "y": 348,
+          "w": 80,
+          "h": 22,
+          "fontSize": 13,
+          "bold": true,
+          "align": "left",
+          "color": "#0F766E"
+        },
+        {
+          "type": "text",
+          "text": "可编辑文案",
+          "x": 64,
+          "y": 374,
+          "w": 376,
+          "h": 32,
+          "fontSize": 20,
+          "bold": true,
+          "align": "left",
+          "color": "#0F172A"
+        },
+        {
+          "type": "text",
+          "text": "标题、要点和备注都在 JSON 里，不写进图片。",
+          "x": 64,
+          "y": 412,
+          "w": 376,
+          "h": 48,
+          "fontSize": 15,
+          "align": "left",
+          "valign": "top",
+          "color": "#334155"
+        },
+        {
+          "type": "shape",
+          "shape": "roundRect",
+          "x": 496,
+          "y": 328,
+          "w": 424,
+          "h": 156,
+          "fill": "#FFFFFF",
+          "line": {
+            "color": "#E2E8F0",
+            "width": 1.1
+          }
+        },
+        {
+          "type": "text",
+          "text": "04",
+          "x": 520,
+          "y": 348,
+          "w": 80,
+          "h": 22,
+          "fontSize": 13,
+          "bold": true,
+          "align": "left",
+          "color": "#C2410C"
+        },
+        {
+          "type": "text",
+          "text": "本地图片",
+          "x": 520,
+          "y": 374,
+          "w": 376,
+          "h": 32,
+          "fontSize": 20,
+          "bold": true,
+          "align": "left",
+          "color": "#0F172A"
+        },
+        {
+          "type": "text",
+          "text": "图片放在仓库 assets 目录，用 asset id 引用，渲染前先校验。",
+          "x": 520,
+          "y": 412,
+          "w": 376,
+          "h": 48,
+          "fontSize": 15,
+          "align": "left",
+          "valign": "top",
+          "color": "#334155"
+        }
+      ]
+    }
+  ]
+}

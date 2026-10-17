@@ -1,0 +1,1063 @@
+{
+  "version": "0.2.0",
+  "page": {
+    "width": 960,
+    "height": 540,
+    "background": "#F8FAFC",
+    "theme": {
+      "font": "Microsoft YaHei"
+    }
+  },
+  "output": "../exports/consulting-deck-live.pptx",
+  "slides": [
+    {
+      "background": "#F8FAFC",
+      "notes": "按现状、对比、建议三步带过议程。细节留在后两页。",
+      "elements": [
+        {
+          "type": "shape",
+          "shape": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 960,
+          "h": 8,
+          "fill": "#1D4ED8",
+          "line": "none"
+        },
+        {
+          "type": "text",
+          "text": "咨询演示",
+          "x": 40,
+          "y": 28,
+          "w": 240,
+          "h": 20,
+          "fontSize": 13,
+          "bold": true,
+          "align": "left",
+          "color": "#2563EB"
+        },
+        {
+          "type": "title",
+          "text": "门店服务体验优化",
+          "x": 40,
+          "y": 52,
+          "w": 760,
+          "h": 40,
+          "fontSize": 28,
+          "bold": true,
+          "align": "left",
+          "color": "#0F172A"
+        },
+        {
+          "type": "text",
+          "text": "用形状、文字和连线排一张议程，后面再展开对比和建议。",
+          "x": 40,
+          "y": 98,
+          "w": 820,
+          "h": 28,
+          "fontSize": 15,
+          "align": "left",
+          "color": "#475569"
+        },
+        {
+          "type": "shape",
+          "id": "agenda_current",
+          "shape": "roundRect",
+          "x": 40,
+          "y": 148,
+          "w": 272,
+          "h": 312,
+          "fill": "#FFFFFF",
+          "line": {
+            "color": "#E2E8F0",
+            "width": 1.1
+          }
+        },
+        {
+          "type": "shape",
+          "shape": "oval",
+          "x": 60,
+          "y": 170,
+          "w": 46,
+          "h": 46,
+          "fill": "#2563EB",
+          "line": "none",
+          "text": {
+            "text": "01",
+            "fontSize": 14,
+            "bold": true,
+            "color": "#FFFFFF"
+          }
+        },
+        {
+          "type": "text",
+          "text": "现状",
+          "x": 60,
+          "y": 230,
+          "w": 232,
+          "h": 36,
+          "fontSize": 20,
+          "bold": true,
+          "align": "left",
+          "color": "#0F172A"
+        },
+        {
+          "type": "text",
+          "text": "高峰排队、岗位空档，以及顾客反复询问同一件事。",
+          "x": 60,
+          "y": 274,
+          "w": 232,
+          "h": 140,
+          "fontSize": 15,
+          "align": "left",
+          "valign": "top",
+          "color": "#334155"
+        },
+        {
+          "type": "line",
+          "from": [312, 193],
+          "to": [344, 193],
+          "line": {
+            "color": "#94A3B8",
+            "width": 1.6,
+            "endArrow": "triangle"
+          }
+        },
+        {
+          "type": "shape",
+          "id": "agenda_compare",
+          "shape": "roundRect",
+          "x": 344,
+          "y": 148,
+          "w": 272,
+          "h": 312,
+          "fill": "#FFFFFF",
+          "line": {
+            "color": "#E2E8F0",
+            "width": 1.1
+          }
+        },
+        {
+          "type": "shape",
+          "shape": "oval",
+          "x": 364,
+          "y": 170,
+          "w": 46,
+          "h": 46,
+          "fill": "#0F766E",
+          "line": "none",
+          "text": {
+            "text": "02",
+            "fontSize": 14,
+            "bold": true,
+            "color": "#FFFFFF"
+          }
+        },
+        {
+          "type": "text",
+          "text": "对比",
+          "x": 364,
+          "y": 230,
+          "w": 232,
+          "h": 36,
+          "fontSize": 20,
+          "bold": true,
+          "align": "left",
+          "color": "#0F172A"
+        },
+        {
+          "type": "text",
+          "text": "维持现状、小范围试点，或一次切换到新流程。",
+          "x": 364,
+          "y": 274,
+          "w": 232,
+          "h": 140,
+          "fontSize": 15,
+          "align": "left",
+          "valign": "top",
+          "color": "#334155"
+        },
+        {
+          "type": "line",
+          "from": [616, 193],
+          "to": [648, 193],
+          "line": {
+            "color": "#94A3B8",
+            "width": 1.6,
+            "endArrow": "triangle"
+          }
+        },
+        {
+          "type": "shape",
+          "id": "agenda_recommend",
+          "shape": "roundRect",
+          "x": 648,
+          "y": 148,
+          "w": 272,
+          "h": 312,
+          "fill": "#FFFFFF",
+          "line": {
+            "color": "#E2E8F0",
+            "width": 1.1
+          }
+        },
+        {
+          "type": "shape",
+          "shape": "oval",
+          "x": 668,
+          "y": 170,
+          "w": 46,
+          "h": 46,
+          "fill": "#C2410C",
+          "line": "none",
+          "text": {
+            "text": "03",
+            "fontSize": 14,
+            "bold": true,
+            "color": "#FFFFFF"
+          }
+        },
+        {
+          "type": "text",
+          "text": "建议",
+          "x": 668,
+          "y": 230,
+          "w": 232,
+          "h": 36,
+          "fontSize": 20,
+          "bold": true,
+          "align": "left",
+          "color": "#0F172A"
+        },
+        {
+          "type": "text",
+          "text": "先做四周试点，用复盘结果决定是否扩展。",
+          "x": 668,
+          "y": 274,
+          "w": 232,
+          "h": 140,
+          "fontSize": 15,
+          "align": "left",
+          "valign": "top",
+          "color": "#334155"
+        },
+        {
+          "type": "text",
+          "text": "后两页展开路径对比和建议。",
+          "x": 40,
+          "y": 484,
+          "w": 420,
+          "h": 24,
+          "fontSize": 13,
+          "align": "left",
+          "color": "#64748B"
+        }
+      ]
+    },
+    {
+      "background": "#F8FAFC",
+      "notes": "先讲三列的差别，再停在「试点优化」。",
+      "elements": [
+        {
+          "type": "shape",
+          "shape": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 960,
+          "h": 8,
+          "fill": "#1D4ED8",
+          "line": "none"
+        },
+        {
+          "type": "text",
+          "text": "咨询演示",
+          "x": 40,
+          "y": 28,
+          "w": 240,
+          "h": 20,
+          "fontSize": 13,
+          "bold": true,
+          "align": "left",
+          "color": "#2563EB"
+        },
+        {
+          "type": "title",
+          "text": "路径对比",
+          "x": 40,
+          "y": 52,
+          "w": 760,
+          "h": 40,
+          "fontSize": 28,
+          "bold": true,
+          "align": "left",
+          "color": "#0F172A"
+        },
+        {
+          "type": "text",
+          "text": "同一目标下的三种做法。中间一列是当前建议。",
+          "x": 40,
+          "y": 98,
+          "w": 820,
+          "h": 28,
+          "fontSize": 15,
+          "align": "left",
+          "color": "#475569"
+        },
+        {
+          "type": "shape",
+          "id": "compare_status_quo",
+          "shape": "roundRect",
+          "x": 40,
+          "y": 146,
+          "w": 272,
+          "h": 350,
+          "fill": "#FFFFFF",
+          "line": {
+            "color": "#E2E8F0",
+            "width": 1.1
+          }
+        },
+        {
+          "type": "shape",
+          "shape": "roundRect",
+          "x": 106,
+          "y": 164,
+          "w": 140,
+          "h": 30,
+          "fill": "#F1F5F9",
+          "line": "none",
+          "text": {
+            "text": "对照",
+            "fontSize": 12,
+            "bold": true,
+            "color": "#475569"
+          }
+        },
+        {
+          "type": "text",
+          "text": "维持现状",
+          "x": 56,
+          "y": 206,
+          "w": 240,
+          "h": 32,
+          "fontSize": 20,
+          "bold": true,
+          "align": "center",
+          "color": "#0F172A"
+        },
+        {
+          "type": "text",
+          "text": "投入",
+          "x": 60,
+          "y": 252,
+          "w": 232,
+          "h": 18,
+          "fontSize": 12,
+          "align": "left",
+          "color": "#64748B"
+        },
+        {
+          "type": "text",
+          "text": "低",
+          "x": 60,
+          "y": 272,
+          "w": 232,
+          "h": 24,
+          "fontSize": 16,
+          "bold": true,
+          "align": "left",
+          "color": "#0F172A"
+        },
+        {
+          "type": "line",
+          "from": [60, 304],
+          "to": [292, 304],
+          "line": {
+            "color": "#E2E8F0",
+            "width": 1
+          }
+        },
+        {
+          "type": "text",
+          "text": "周期",
+          "x": 60,
+          "y": 312,
+          "w": 232,
+          "h": 18,
+          "fontSize": 12,
+          "align": "left",
+          "color": "#64748B"
+        },
+        {
+          "type": "text",
+          "text": "暂不启动",
+          "x": 60,
+          "y": 332,
+          "w": 232,
+          "h": 24,
+          "fontSize": 16,
+          "bold": true,
+          "align": "left",
+          "color": "#0F172A"
+        },
+        {
+          "type": "line",
+          "from": [60, 364],
+          "to": [292, 364],
+          "line": {
+            "color": "#E2E8F0",
+            "width": 1
+          }
+        },
+        {
+          "type": "text",
+          "text": "风险",
+          "x": 60,
+          "y": 372,
+          "w": 232,
+          "h": 18,
+          "fontSize": 12,
+          "align": "left",
+          "color": "#64748B"
+        },
+        {
+          "type": "text",
+          "text": "体验继续承压",
+          "x": 60,
+          "y": 392,
+          "w": 232,
+          "h": 24,
+          "fontSize": 16,
+          "bold": true,
+          "align": "left",
+          "color": "#0F172A"
+        },
+        {
+          "type": "line",
+          "from": [60, 424],
+          "to": [292, 424],
+          "line": {
+            "color": "#E2E8F0",
+            "width": 1
+          }
+        },
+        {
+          "type": "text",
+          "text": "适合",
+          "x": 60,
+          "y": 432,
+          "w": 232,
+          "h": 18,
+          "fontSize": 12,
+          "align": "left",
+          "color": "#64748B"
+        },
+        {
+          "type": "text",
+          "text": "只作对照",
+          "x": 60,
+          "y": 452,
+          "w": 232,
+          "h": 24,
+          "fontSize": 16,
+          "bold": true,
+          "align": "left",
+          "color": "#0F172A"
+        },
+        {
+          "type": "shape",
+          "id": "compare_pilot",
+          "shape": "roundRect",
+          "x": 344,
+          "y": 146,
+          "w": 272,
+          "h": 350,
+          "fill": "#EAF3FF",
+          "line": {
+            "color": "#93C5FD",
+            "width": 1.4
+          }
+        },
+        {
+          "type": "shape",
+          "shape": "roundRect",
+          "x": 410,
+          "y": 164,
+          "w": 140,
+          "h": 30,
+          "fill": "#2563EB",
+          "line": "none",
+          "text": {
+            "text": "当前建议",
+            "fontSize": 12,
+            "bold": true,
+            "color": "#FFFFFF"
+          }
+        },
+        {
+          "type": "text",
+          "text": "试点优化",
+          "x": 360,
+          "y": 206,
+          "w": 240,
+          "h": 32,
+          "fontSize": 20,
+          "bold": true,
+          "align": "center",
+          "color": "#1D4ED8"
+        },
+        {
+          "type": "text",
+          "text": "投入",
+          "x": 364,
+          "y": 252,
+          "w": 232,
+          "h": 18,
+          "fontSize": 12,
+          "align": "left",
+          "color": "#64748B"
+        },
+        {
+          "type": "text",
+          "text": "中等",
+          "x": 364,
+          "y": 272,
+          "w": 232,
+          "h": 24,
+          "fontSize": 16,
+          "bold": true,
+          "align": "left",
+          "color": "#0F172A"
+        },
+        {
+          "type": "line",
+          "from": [364, 304],
+          "to": [596, 304],
+          "line": {
+            "color": "#BFDBFE",
+            "width": 1
+          }
+        },
+        {
+          "type": "text",
+          "text": "周期",
+          "x": 364,
+          "y": 312,
+          "w": 232,
+          "h": 18,
+          "fontSize": 12,
+          "align": "left",
+          "color": "#64748B"
+        },
+        {
+          "type": "text",
+          "text": "四周",
+          "x": 364,
+          "y": 332,
+          "w": 232,
+          "h": 24,
+          "fontSize": 16,
+          "bold": true,
+          "align": "left",
+          "color": "#0F172A"
+        },
+        {
+          "type": "line",
+          "from": [364, 364],
+          "to": [596, 364],
+          "line": {
+            "color": "#BFDBFE",
+            "width": 1
+          }
+        },
+        {
+          "type": "text",
+          "text": "风险",
+          "x": 364,
+          "y": 372,
+          "w": 232,
+          "h": 18,
+          "fontSize": 12,
+          "align": "left",
+          "color": "#64748B"
+        },
+        {
+          "type": "text",
+          "text": "范围可控",
+          "x": 364,
+          "y": 392,
+          "w": 232,
+          "h": 24,
+          "fontSize": 16,
+          "bold": true,
+          "align": "left",
+          "color": "#0F172A"
+        },
+        {
+          "type": "line",
+          "from": [364, 424],
+          "to": [596, 424],
+          "line": {
+            "color": "#BFDBFE",
+            "width": 1
+          }
+        },
+        {
+          "type": "text",
+          "text": "适合",
+          "x": 364,
+          "y": 432,
+          "w": 232,
+          "h": 18,
+          "fontSize": 12,
+          "align": "left",
+          "color": "#64748B"
+        },
+        {
+          "type": "text",
+          "text": "作为起步",
+          "x": 364,
+          "y": 452,
+          "w": 232,
+          "h": 24,
+          "fontSize": 16,
+          "bold": true,
+          "align": "left",
+          "color": "#0F172A"
+        },
+        {
+          "type": "shape",
+          "id": "compare_full",
+          "shape": "roundRect",
+          "x": 648,
+          "y": 146,
+          "w": 272,
+          "h": 350,
+          "fill": "#FFFFFF",
+          "line": {
+            "color": "#E2E8F0",
+            "width": 1.1
+          }
+        },
+        {
+          "type": "shape",
+          "shape": "roundRect",
+          "x": 714,
+          "y": 164,
+          "w": 140,
+          "h": 30,
+          "fill": "#FFF7ED",
+          "line": "none",
+          "text": {
+            "text": "备选",
+            "fontSize": 12,
+            "bold": true,
+            "color": "#C2410C"
+          }
+        },
+        {
+          "type": "text",
+          "text": "一次切换",
+          "x": 664,
+          "y": 206,
+          "w": 240,
+          "h": 32,
+          "fontSize": 20,
+          "bold": true,
+          "align": "center",
+          "color": "#0F172A"
+        },
+        {
+          "type": "text",
+          "text": "投入",
+          "x": 668,
+          "y": 252,
+          "w": 232,
+          "h": 18,
+          "fontSize": 12,
+          "align": "left",
+          "color": "#64748B"
+        },
+        {
+          "type": "text",
+          "text": "较高",
+          "x": 668,
+          "y": 272,
+          "w": 232,
+          "h": 24,
+          "fontSize": 16,
+          "bold": true,
+          "align": "left",
+          "color": "#0F172A"
+        },
+        {
+          "type": "line",
+          "from": [668, 304],
+          "to": [900, 304],
+          "line": {
+            "color": "#E2E8F0",
+            "width": 1
+          }
+        },
+        {
+          "type": "text",
+          "text": "周期",
+          "x": 668,
+          "y": 312,
+          "w": 232,
+          "h": 18,
+          "fontSize": 12,
+          "align": "left",
+          "color": "#64748B"
+        },
+        {
+          "type": "text",
+          "text": "一个季度",
+          "x": 668,
+          "y": 332,
+          "w": 232,
+          "h": 24,
+          "fontSize": 16,
+          "bold": true,
+          "align": "left",
+          "color": "#0F172A"
+        },
+        {
+          "type": "line",
+          "from": [668, 364],
+          "to": [900, 364],
+          "line": {
+            "color": "#E2E8F0",
+            "width": 1
+          }
+        },
+        {
+          "type": "text",
+          "text": "风险",
+          "x": 668,
+          "y": 372,
+          "w": 232,
+          "h": 18,
+          "fontSize": 12,
+          "align": "left",
+          "color": "#64748B"
+        },
+        {
+          "type": "text",
+          "text": "培训与切换并行",
+          "x": 668,
+          "y": 392,
+          "w": 232,
+          "h": 24,
+          "fontSize": 16,
+          "bold": true,
+          "align": "left",
+          "color": "#0F172A"
+        },
+        {
+          "type": "line",
+          "from": [668, 424],
+          "to": [900, 424],
+          "line": {
+            "color": "#E2E8F0",
+            "width": 1
+          }
+        },
+        {
+          "type": "text",
+          "text": "适合",
+          "x": 668,
+          "y": 432,
+          "w": 232,
+          "h": 18,
+          "fontSize": 12,
+          "align": "left",
+          "color": "#64748B"
+        },
+        {
+          "type": "text",
+          "text": "试点有效之后",
+          "x": 668,
+          "y": 452,
+          "w": 232,
+          "h": 24,
+          "fontSize": 16,
+          "bold": true,
+          "align": "left",
+          "color": "#0F172A"
+        }
+      ]
+    },
+    {
+      "background": "#F8FAFC",
+      "notes": "用这一页收束。离开前确认试点门店、负责人和复盘日期。",
+      "elements": [
+        {
+          "type": "shape",
+          "shape": "rect",
+          "x": 0,
+          "y": 0,
+          "w": 960,
+          "h": 8,
+          "fill": "#1D4ED8",
+          "line": "none"
+        },
+        {
+          "type": "text",
+          "text": "咨询演示",
+          "x": 40,
+          "y": 28,
+          "w": 240,
+          "h": 20,
+          "fontSize": 13,
+          "bold": true,
+          "align": "left",
+          "color": "#2563EB"
+        },
+        {
+          "type": "title",
+          "text": "建议先做试点",
+          "x": 40,
+          "y": 52,
+          "w": 760,
+          "h": 40,
+          "fontSize": 28,
+          "bold": true,
+          "align": "left",
+          "color": "#0F172A"
+        },
+        {
+          "type": "text",
+          "text": "把建议写成一句可执行的话，再列出三步。",
+          "x": 40,
+          "y": 98,
+          "w": 820,
+          "h": 28,
+          "fontSize": 15,
+          "align": "left",
+          "color": "#475569"
+        },
+        {
+          "type": "shape",
+          "id": "recommend_lead",
+          "shape": "roundRect",
+          "x": 40,
+          "y": 142,
+          "w": 880,
+          "h": 112,
+          "fill": "#EAF3FF",
+          "line": {
+            "color": "#BFDBFE",
+            "width": 1.2
+          }
+        },
+        {
+          "type": "text",
+          "text": "先在六家门店试点排队引导和高峰排班。四周后看等待时长和一次解决率，再决定是否扩展。",
+          "x": 64,
+          "y": 162,
+          "w": 832,
+          "h": 72,
+          "fontSize": 18,
+          "align": "left",
+          "valign": "middle",
+          "color": "#1E3A8A"
+        },
+        {
+          "type": "text",
+          "text": "接下来三步",
+          "x": 40,
+          "y": 270,
+          "w": 240,
+          "h": 22,
+          "fontSize": 13,
+          "bold": true,
+          "align": "left",
+          "color": "#475569"
+        },
+        {
+          "type": "shape",
+          "shape": "roundRect",
+          "x": 40,
+          "y": 304,
+          "w": 272,
+          "h": 180,
+          "fill": "#FFFFFF",
+          "line": {
+            "color": "#E2E8F0",
+            "width": 1.1
+          }
+        },
+        {
+          "type": "shape",
+          "shape": "oval",
+          "x": 58,
+          "y": 322,
+          "w": 36,
+          "h": 36,
+          "fill": "#2563EB",
+          "line": "none",
+          "text": {
+            "text": "1",
+            "fontSize": 14,
+            "bold": true,
+            "color": "#FFFFFF"
+          }
+        },
+        {
+          "type": "text",
+          "text": "选定门店",
+          "x": 104,
+          "y": 326,
+          "w": 188,
+          "h": 30,
+          "fontSize": 16,
+          "bold": true,
+          "align": "left",
+          "valign": "middle",
+          "color": "#0F172A"
+        },
+        {
+          "type": "text",
+          "text": "挑六家高峰明显、店长愿意配合的门店。",
+          "x": 60,
+          "y": 376,
+          "w": 232,
+          "h": 84,
+          "fontSize": 14,
+          "align": "left",
+          "valign": "top",
+          "color": "#334155"
+        },
+        {
+          "type": "line",
+          "from": [312, 340],
+          "to": [344, 340],
+          "line": {
+            "color": "#94A3B8",
+            "width": 1.6,
+            "endArrow": "triangle"
+          }
+        },
+        {
+          "type": "shape",
+          "shape": "roundRect",
+          "x": 344,
+          "y": 304,
+          "w": 272,
+          "h": 180,
+          "fill": "#FFFFFF",
+          "line": {
+            "color": "#E2E8F0",
+            "width": 1.1
+          }
+        },
+        {
+          "type": "shape",
+          "shape": "oval",
+          "x": 362,
+          "y": 322,
+          "w": 36,
+          "h": 36,
+          "fill": "#0F766E",
+          "line": "none",
+          "text": {
+            "text": "2",
+            "fontSize": 14,
+            "bold": true,
+            "color": "#FFFFFF"
+          }
+        },
+        {
+          "type": "text",
+          "text": "对齐负责人",
+          "x": 408,
+          "y": 326,
+          "w": 188,
+          "h": 30,
+          "fontSize": 16,
+          "bold": true,
+          "align": "left",
+          "valign": "middle",
+          "color": "#0F172A"
+        },
+        {
+          "type": "text",
+          "text": "指定店长和一名区域对接人，周报只看两项指标。",
+          "x": 364,
+          "y": 376,
+          "w": 232,
+          "h": 84,
+          "fontSize": 14,
+          "align": "left",
+          "valign": "top",
+          "color": "#334155"
+        },
+        {
+          "type": "line",
+          "from": [616, 340],
+          "to": [648, 340],
+          "line": {
+            "color": "#94A3B8",
+            "width": 1.6,
+            "endArrow": "triangle"
+          }
+        },
+        {
+          "type": "shape",
+          "shape": "roundRect",
+          "x": 648,
+          "y": 304,
+          "w": 272,
+          "h": 180,
+          "fill": "#FFFFFF",
+          "line": {
+            "color": "#E2E8F0",
+            "width": 1.1
+          }
+        },
+        {
+          "type": "shape",
+          "shape": "oval",
+          "x": 666,
+          "y": 322,
+          "w": 36,
+          "h": 36,
+          "fill": "#C2410C",
+          "line": "none",
+          "text": {
+            "text": "3",
+            "fontSize": 14,
+            "bold": true,
+            "color": "#FFFFFF"
+          }
+        },
+        {
+          "type": "text",
+          "text": "四周复盘",
+          "x": 712,
+          "y": 326,
+          "w": 188,
+          "h": 30,
+          "fontSize": 16,
+          "bold": true,
+          "align": "left",
+          "valign": "middle",
+          "color": "#0F172A"
+        },
+        {
+          "type": "text",
+          "text": "用等待时长和一次解决率决定扩展、调整或停止。",
+          "x": 668,
+          "y": 376,
+          "w": 232,
+          "h": 84,
+          "fontSize": 14,
+          "align": "left",
+          "valign": "top",
+          "color": "#334155"
+        }
+      ]
+    }
+  ]
+}
