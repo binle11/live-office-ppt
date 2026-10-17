@@ -22,3 +22,8 @@ Desktop.ini
 .DS_Store
 .vscode/
 .idea/
+
+# Python validation cache
+__pycache__/
+*.pyc
+.venv/

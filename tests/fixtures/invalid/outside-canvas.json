@@ -1,0 +1,21 @@
+{
+  "page": {
+    "width": 960,
+    "height": 540
+  },
+  "slides": [
+    {
+      "elements": [
+        {
+          "type": "box",
+          "shape": "rectangle",
+          "x": 1200,
+          "y": 680,
+          "w": 100,
+          "h": 60,
+          "fill": "#FFFFFF"
+        }
+      ]
+    }
+  ]
+}

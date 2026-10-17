@@ -27,7 +27,12 @@ server renderer.
 2. Create the deck JSON spec in the user's project directory.
 3. If bitmap visuals are needed, generate or source them first, save them under
    the deck project's `assets/images/`, and add them to top-level `assets`.
-4. Validate before opening PowerPoint:
+4. Validate before opening PowerPoint. Schema, canvas bounds, and asset ids:
+   ```bash
+   python3 <live-office-ppt>/validate-deck.py <deck-spec.json>
+   ```
+   The renderer preflight checks slides and image files. It does not load the
+   JSON schema:
    ```powershell
    powershell -ExecutionPolicy Bypass -File <live-office-ppt>\render-live-ppt.ps1 `
      -Spec <deck-spec.json> `

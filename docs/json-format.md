@@ -3,6 +3,12 @@
 The renderer consumes one JSON file per deck. Coordinates use PowerPoint points.
 The default 16:9 canvas is `960 x 540`, with `(0, 0)` at the top-left.
 
+`w` and `h` must be greater than 0. `x` and `y` must be greater than or equal to 0.
+Colors use `#RRGGBB`. A positioned element must also fit inside the page: `x + w`
+and `y + h` stay within the page width and height, including the edges. Those
+page-relative checks live in the pure validator because they depend on the
+page size. See [validation.md](validation.md).
+
 ## Top-Level Structure
 
 ```json
@@ -75,9 +81,9 @@ Elements are drawn in order. Later elements appear above earlier elements.
 }
 ```
 
-`type: "text"` uses the same fields. Supported alignment values are `left`,
-`center`, and `right`. Supported vertical alignment values are `top`, `middle`,
-and `bottom`.
+`type: "text"` uses the same fields. `text` is required. Supported alignment
+values are `left`, `center`, and `right`. Supported vertical alignment values
+are `top`, `middle`, `center`, and `bottom`. `center` matches `middle`.
 
 ## Shapes
 
@@ -105,9 +111,9 @@ and `bottom`.
 
 Supported shape names:
 
-- `rect`
-- `roundRect`
-- `oval`
+- `rect` (alias `rectangle`)
+- `roundRect` (alias `roundedRectangle`)
+- `oval` (alias `circle`)
 - `diamond`
 - `triangle`
 - `hexagon`
@@ -130,6 +136,9 @@ Set `fill` or `line` to `"none"` to hide it.
   }
 }
 ```
+
+A line includes either `from` and `to`, or `x1`, `y1`, `x2`, and `y2`. Those
+endpoints stay inside the page canvas.
 
 Supported connector values:
 
@@ -159,7 +168,9 @@ Supported arrow values:
 }
 ```
 
-Use `asset` for reusable files or `path` for one-off local files.
+Use `asset` for reusable files or `path` for one-off local files. `asset` must
+match an `id` in top-level `assets`. The referenced asset needs a `path` or
+`file`, and that file must exist next to the spec when validation runs.
 
 Fit modes:
 

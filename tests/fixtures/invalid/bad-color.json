@@ -1,0 +1,18 @@
+{
+  "slides": [
+    {
+      "background": "blue",
+      "elements": [
+        {
+          "type": "text",
+          "text": "Hello",
+          "x": 48,
+          "y": 48,
+          "w": 200,
+          "h": 32,
+          "color": "#0F172A"
+        }
+      ]
+    }
+  ]
+}

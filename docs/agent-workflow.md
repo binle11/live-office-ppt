@@ -13,7 +13,11 @@ editable layers:
 3. If the deck needs bitmap visuals, generate or source them first and copy the
    final files into the deck project's `assets/images/`.
 4. Add each image to top-level `assets`.
-5. Validate the spec with `-ValidateOnly`.
+5. Validate the spec with `python3 validate-deck.py <spec>`. That command loads
+   the JSON schema and checks canvas bounds without opening PowerPoint. On
+   Windows, `render-live-ppt.ps1 -ValidateOnly` remains available as a renderer
+   preflight; it checks slides and image files and leaves the schema unloaded.
+   See [validation.md](validation.md).
 6. Render with PowerPoint visible and a moderate `-StepDelayMs`.
 7. Inspect the live PowerPoint window.
 8. Revise the JSON and rerun until the deck is acceptable.

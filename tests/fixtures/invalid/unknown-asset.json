@@ -1,0 +1,24 @@
+{
+  "assets": [
+    {
+      "id": "hero",
+      "type": "image",
+      "prompt": "Declared asset that the image element does not reference."
+    }
+  ],
+  "slides": [
+    {
+      "elements": [
+        {
+          "type": "image",
+          "asset": "missing-hero",
+          "x": 40,
+          "y": 40,
+          "w": 160,
+          "h": 90,
+          "fit": "contain"
+        }
+      ]
+    }
+  ]
+}

@@ -20,7 +20,8 @@ ordinary `.pptx` files with editable PowerPoint objects.
 - Image assets referenced by ID from a top-level `assets` list
 - Image fit modes: `cover`, `contain`, `stretch`, and `original`
 - Speaker notes support
-- Validation mode that checks specs before opening PowerPoint
+- COM-free validation for schema errors, canvas bounds, and asset references
+- Windows validation mode that checks specs before opening PowerPoint
 - Agent Skill integration for Codex and Claude Code
 - OpenClaw-oriented adapter for Windows desktop workflows
 
@@ -30,8 +31,9 @@ ordinary `.pptx` files with editable PowerPoint objects.
 - Desktop Microsoft PowerPoint
 - PowerShell 5.1 or newer
 
-The renderer uses local Office automation and is not intended for Linux,
-macOS, or headless CI environments.
+Rendering uses local Office automation and runs on Windows. Spec validation
+with `validate-deck.py` also runs on Linux and in CI. That command needs
+Python 3 and the packages in `requirements-validate.txt`.
 
 ## Quick Start
 
@@ -49,7 +51,18 @@ powershell -ExecutionPolicy Bypass -File .\render-live-ppt.ps1 `
 
 The generated deck is written to `exports/`.
 
-Validate a spec without opening PowerPoint:
+Validate a spec without opening PowerPoint. Agents and CI should use the pure
+validator. It loads the JSON schema, checks canvas bounds and asset ids, and
+prints `path: reason` when a spec fails:
+
+```bash
+python3 -m pip install -r requirements-validate.txt
+python3 validate-deck.py examples/network-diagram.json
+```
+
+On Windows, the renderer can also preflight a spec before it opens PowerPoint.
+That check confirms slides and image files. Field-level schema results come
+from `validate-deck.py`. See [docs/validation.md](docs/validation.md).
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\render-live-ppt.ps1 `
@@ -104,9 +117,10 @@ Coordinates use PowerPoint points. The default 16:9 canvas is `960 x 540`.
 ```
 
 See [docs/json-format.md](docs/json-format.md),
+[docs/validation.md](docs/validation.md),
 [docs/agent-workflow.md](docs/agent-workflow.md), and
-[schema/deck.schema.json](schema/deck.schema.json) for the full format and
-agent-oriented workflow.
+[schema/deck.schema.json](schema/deck.schema.json) for the full format,
+validation commands, and agent-oriented workflow.
 
 ## Image Assets
 
@@ -201,7 +215,6 @@ Generated `.pptx` files do not contain auto-run macros.
 
 - More native chart primitives
 - Template and theme support
-- Better schema-level validation for element bounds
 - Optional grouped element abstractions
 - More examples for consulting, research, and product decks
 
