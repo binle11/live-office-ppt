@@ -16,7 +16,19 @@ files. Keep changes reproducible and easy to audit.
 
 ## Validation
 
-Run these after renderer, schema, example, or skill changes:
+After schema, example, or spec changes, run the pure validator. It loads
+`schema/deck.schema.json`, checks canvas bounds, and runs on Linux without
+PowerPoint:
+
+```bash
+python3 -m pip install -r requirements-validate.txt
+python3 validate-deck.py examples/network-diagram.json
+python3 validate-deck.py examples/image-asset-demo.json
+python3 -m unittest tests/test_validation.py
+```
+
+On Windows, `-ValidateOnly` remains the renderer preflight. It checks slides
+and image files and does not load the JSON schema:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\render-live-ppt.ps1 `

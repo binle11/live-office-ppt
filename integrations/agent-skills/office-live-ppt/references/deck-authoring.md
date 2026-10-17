@@ -98,7 +98,15 @@ Image:
 
 ## Quality Checks
 
-Before rendering:
+Before rendering, run the pure validator. It loads the JSON schema and checks
+canvas bounds without opening PowerPoint:
+
+```bash
+python3 <tool>/validate-deck.py <deck-spec.json>
+```
+
+On Windows, the renderer preflight checks slides and image files. It does not
+load the JSON schema:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File <tool>\render-live-ppt.ps1 `

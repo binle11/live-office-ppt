@@ -25,7 +25,12 @@ COM automation.
 3. If bitmap visuals are needed, generate them first, save the selected files
    under the deck project's `assets/images/`, and add them to top-level
    `assets`.
-4. Validate before opening PowerPoint:
+4. Validate before opening PowerPoint. Schema, canvas bounds, and asset ids:
+   ```bash
+   python3 <live-office-ppt>/validate-deck.py <deck-spec.json>
+   ```
+   On Windows, the renderer preflight is also available. It checks slides and
+   image files and does not load the JSON schema:
    ```powershell
    powershell -ExecutionPolicy Bypass -File <live-office-ppt>\render-live-ppt.ps1 `
      -Spec <deck-spec.json> `

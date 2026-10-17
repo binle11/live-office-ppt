@@ -1,0 +1,2 @@
+# Dependencies for validate-deck.py. The PowerPoint renderer does not import this file.
+jsonschema>=4.18,<5

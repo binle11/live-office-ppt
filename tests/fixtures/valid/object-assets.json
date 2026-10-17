@@ -1,0 +1,27 @@
+{
+  "page": {
+    "width": 960,
+    "height": 540
+  },
+  "assets": {
+    "biometricHero": {
+      "type": "image",
+      "path": "../../../assets/images/biometric-network-demo.png"
+    }
+  },
+  "slides": [
+    {
+      "elements": [
+        {
+          "type": "image",
+          "asset": "biometricHero",
+          "x": 0,
+          "y": 0,
+          "w": 320,
+          "h": 180,
+          "fit": "contain"
+        }
+      ]
+    }
+  ]
+}

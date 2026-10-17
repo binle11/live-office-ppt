@@ -7,16 +7,32 @@ easy to inspect.
 
 Requirements:
 
-- Windows
-- Desktop Microsoft PowerPoint for render smoke tests
-- PowerShell 5.1 or newer
+- Windows with desktop Microsoft PowerPoint for render smoke tests
+- PowerShell 5.1 or newer for the renderer
+- Python 3 for COM-free spec validation
 - Git
 
-No package install is required for the current renderer.
+Install the validation dependency before running the pure checker:
+
+```bash
+python3 -m pip install -r requirements-validate.txt
+```
+
+No package install is required for the PowerPoint renderer itself.
 
 ## Validation
 
-Run spec validation before opening a pull request:
+Run the pure validator before opening a pull request. It is the schema and
+canvas check, and it runs without PowerPoint:
+
+```bash
+python3 validate-deck.py examples/network-diagram.json
+python3 validate-deck.py examples/image-asset-demo.json
+python3 -m unittest tests/test_validation.py
+```
+
+On Windows, the renderer preflight is still available. It does not load the
+JSON schema:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\render-live-ppt.ps1 `

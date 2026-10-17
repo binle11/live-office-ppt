@@ -2,6 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://example.com/live-office-ppt/deck.schema.json",
   "title": "Live Office PPT Deck Spec",
+  "description": "Deck spec checked by schema/deck.schema.json and validate-deck.py. The schema covers types, required fields, #RRGGBB colors, and positive width and height. Fitting a shape inside the page, unique asset ids, asset references, and local image files depend on other values, so validate-deck.py checks those after the schema passes.",
   "type": "object",
   "required": ["slides"],
   "additionalProperties": true,
@@ -19,6 +20,7 @@
       "$ref": "#/$defs/theme"
     },
     "assets": {
+      "description": "must be an array of assets or a map of asset id to asset",
       "oneOf": [
         {
           "type": "array",
@@ -44,22 +46,33 @@
   },
   "$defs": {
     "color": {
+      "description": "a #RRGGBB color",
       "type": "string",
-      "pattern": "^#?[0-9A-Fa-f]{6}$"
+      "pattern": "^#[0-9A-Fa-f]{6}$"
     },
     "point": {
-      "type": "number"
+      "type": "number",
+      "minimum": 0
+    },
+    "positiveLength": {
+      "description": "A length greater than 0, in PowerPoint points.",
+      "type": "number",
+      "exclusiveMinimum": 0
     },
     "page": {
       "type": "object",
       "additionalProperties": true,
       "properties": {
         "width": {
+          "description": "Page width in PowerPoint points. Defaults to 960 when omitted.",
           "type": "number",
+          "exclusiveMinimum": 0,
           "default": 960
         },
         "height": {
+          "description": "Page height in PowerPoint points. Defaults to 540 when omitted.",
           "type": "number",
+          "exclusiveMinimum": 0,
           "default": 540
         },
         "background": {
@@ -96,10 +109,12 @@
           "type": "string"
         },
         "path": {
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "file": {
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "prompt": {
           "type": "string"
@@ -111,7 +126,8 @@
       "additionalProperties": true,
       "properties": {
         "id": {
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "type": {
           "type": "string",
@@ -121,10 +137,12 @@
           "type": "string"
         },
         "path": {
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "file": {
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "prompt": {
           "type": "string"
@@ -151,25 +169,89 @@
       }
     },
     "element": {
-      "oneOf": [
+      "type": "object",
+      "required": ["type"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["text", "title", "box", "shape", "line", "connector", "image", "sleep"]
+        }
+      },
+      "allOf": [
         {
-          "$ref": "#/$defs/textElement"
+          "if": {
+            "type": "object",
+            "required": ["type"],
+            "properties": {
+              "type": {
+                "enum": ["text", "title"]
+              }
+            }
+          },
+          "then": {
+            "$ref": "#/$defs/textElement"
+          }
         },
         {
-          "$ref": "#/$defs/shapeElement"
+          "if": {
+            "type": "object",
+            "required": ["type"],
+            "properties": {
+              "type": {
+                "enum": ["box", "shape"]
+              }
+            }
+          },
+          "then": {
+            "$ref": "#/$defs/shapeElement"
+          }
         },
         {
-          "$ref": "#/$defs/lineElement"
+          "if": {
+            "type": "object",
+            "required": ["type"],
+            "properties": {
+              "type": {
+                "enum": ["line", "connector"]
+              }
+            }
+          },
+          "then": {
+            "$ref": "#/$defs/lineElement"
+          }
         },
         {
-          "$ref": "#/$defs/imageElement"
+          "if": {
+            "type": "object",
+            "required": ["type"],
+            "properties": {
+              "type": {
+                "enum": ["image"]
+              }
+            }
+          },
+          "then": {
+            "$ref": "#/$defs/imageElement"
+          }
         },
         {
-          "$ref": "#/$defs/sleepElement"
+          "if": {
+            "type": "object",
+            "required": ["type"],
+            "properties": {
+              "type": {
+                "enum": ["sleep"]
+              }
+            }
+          },
+          "then": {
+            "$ref": "#/$defs/sleepElement"
+          }
         }
       ]
     },
     "position": {
+      "description": "x and y are measured from the top-left of the page and must be greater than or equal to 0. w and h must be greater than 0. validate-deck.py checks x + w and y + h against the page size.",
       "type": "object",
       "required": ["x", "y", "w", "h"],
       "properties": {
@@ -180,10 +262,10 @@
           "$ref": "#/$defs/point"
         },
         "w": {
-          "$ref": "#/$defs/point"
+          "$ref": "#/$defs/positiveLength"
         },
         "h": {
-          "$ref": "#/$defs/point"
+          "$ref": "#/$defs/positiveLength"
         }
       }
     },
@@ -198,7 +280,8 @@
           "type": "string"
         },
         "fontSize": {
-          "type": "number"
+          "type": "number",
+          "exclusiveMinimum": 0
         },
         "color": {
           "$ref": "#/$defs/color"
@@ -217,6 +300,7 @@
       }
     },
     "lineStyle": {
+      "description": "must be \"none\" or a line object",
       "oneOf": [
         {
           "type": "string",
@@ -230,7 +314,8 @@
               "$ref": "#/$defs/color"
             },
             "width": {
-              "type": "number"
+              "type": "number",
+              "exclusiveMinimum": 0
             },
             "beginArrow": {
               "$ref": "#/$defs/arrow"
@@ -247,9 +332,14 @@
       "enum": ["none", "triangle", "stealth", "oval", "diamond"]
     },
     "fillStyle": {
+      "description": "must be \"none\", a #RRGGBB color, or a fill object",
       "oneOf": [
         {
-          "type": "string"
+          "type": "string",
+          "enum": ["none"]
+        },
+        {
+          "$ref": "#/$defs/color"
         },
         {
           "type": "object",
@@ -267,6 +357,21 @@
         }
       ]
     },
+    "shapeName": {
+      "type": "string",
+      "enum": [
+        "rect",
+        "rectangle",
+        "roundRect",
+        "roundedRectangle",
+        "oval",
+        "circle",
+        "diamond",
+        "triangle",
+        "hexagon",
+        "parallelogram"
+      ]
+    },
     "textElement": {
       "allOf": [
         {
@@ -277,13 +382,7 @@
         },
         {
           "type": "object",
-          "required": ["type", "text"],
-          "properties": {
-            "type": {
-              "type": "string",
-              "enum": ["text", "title"]
-            }
-          }
+          "required": ["text"]
         }
       ]
     },
@@ -294,21 +393,17 @@
         },
         {
           "type": "object",
-          "required": ["type"],
           "additionalProperties": true,
           "properties": {
-            "type": {
-              "type": "string",
-              "enum": ["box", "shape"]
-            },
             "id": {
-              "type": "string"
+              "type": "string",
+              "minLength": 1
             },
             "shape": {
-              "type": "string",
-              "enum": ["rect", "rectangle", "roundRect", "roundedRectangle", "oval", "circle", "diamond", "triangle", "hexagon", "parallelogram"]
+              "$ref": "#/$defs/shapeName"
             },
             "text": {
+              "description": "must be a string or a text style object",
               "oneOf": [
                 {
                   "type": "string"
@@ -329,16 +424,13 @@
       ]
     },
     "lineElement": {
+      "description": "must include from and to, or x1, y1, x2, and y2",
       "type": "object",
-      "required": ["type"],
       "additionalProperties": true,
       "properties": {
-        "type": {
-          "type": "string",
-          "enum": ["line", "connector"]
-        },
         "id": {
-          "type": "string"
+          "type": "string",
+          "minLength": 1
         },
         "connector": {
           "type": "string",
@@ -365,7 +457,15 @@
         "line": {
           "$ref": "#/$defs/lineStyle"
         }
-      }
+      },
+      "anyOf": [
+        {
+          "required": ["from", "to"]
+        },
+        {
+          "required": ["x1", "y1", "x2", "y2"]
+        }
+      ]
     },
     "pointPair": {
       "type": "array",
@@ -387,22 +487,21 @@
           "$ref": "#/$defs/position"
         },
         {
+          "description": "must include asset or path",
           "type": "object",
-          "required": ["type"],
           "additionalProperties": true,
           "properties": {
-            "type": {
-              "type": "string",
-              "enum": ["image"]
-            },
             "id": {
-              "type": "string"
+              "type": "string",
+              "minLength": 1
             },
             "asset": {
-              "type": "string"
+              "type": "string",
+              "minLength": 1
             },
             "path": {
-              "type": "string"
+              "type": "string",
+              "minLength": 1
             },
             "fit": {
               "type": "string",
@@ -413,7 +512,18 @@
             },
             "frame": {
               "type": "object",
-              "additionalProperties": true
+              "additionalProperties": true,
+              "properties": {
+                "shape": {
+                  "$ref": "#/$defs/shapeName"
+                },
+                "fill": {
+                  "$ref": "#/$defs/fillStyle"
+                },
+                "line": {
+                  "$ref": "#/$defs/lineStyle"
+                }
+              }
             }
           },
           "anyOf": [
@@ -429,7 +539,7 @@
     },
     "sleepElement": {
       "type": "object",
-      "required": ["type", "ms"],
+      "required": ["ms"],
       "additionalProperties": false,
       "properties": {
         "type": {
